@@ -55,7 +55,7 @@ Hi! My name is Krish Kelageri.
            JS Basics
         </div>
     </a>
-    <a href="{{site.baseurl}}/game/essentials/variables" style="text-decoration: none;">
+    <a href="{{site.baseurl}}/2025-01-01-allhw (1).ipynb" style="text-decoration: none;">
         <div style="background-color: var(--blue); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
            JS Variables
         </div>
