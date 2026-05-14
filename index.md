@@ -57,12 +57,12 @@ Hi! My name is Krish Kelageri.
     </a>
     <a href="{{site.baseurl}}/allhw" style="text-decoration: none;">
         <div style="background-color: var(--blue); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           JS Variables
+           All Homeworks
         </div>
     </a>
-    <a href="{{site.baseurl}}/gamerunner" style="text-decoration: none;">
+    <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration: none;">
         <div style="background-color: var(--warn); color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           Gamerunner
+           Lesson
         </div>
     </a>
     <a href="{{site.baseurl}}/network/stack" style="text-decoration: none;">
