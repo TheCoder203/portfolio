@@ -429,18 +429,6 @@ this.initialize = () => {
     sp._el = el;
   }
 
-  // ── Draw pit hole (visual darkness) ────────────────────────────────────
-  const pitEl = document.createElement('div');
-  Object.assign(pitEl.style, {
-    position:'absolute',
-    left: (250*scaleX)+'px', top: (top + 340*scaleY)+'px',
-    width: (80*scaleX)+'px', height: (32*scaleY)+'px',
-    background:'#000', zIndex:'7', pointerEvents:'none',
-  });
-  container.appendChild(pitEl);
-  this._overlays.push(pitEl);
-  this._pitEl = pitEl;
-
   // ── Draw flag ──────────────────────────────────────────────────────────
   const pole = document.createElement('div');
   Object.assign(pole.style, {
@@ -543,15 +531,6 @@ this.initialize = () => {
           height: sp.h + 'px',
         });
       }
-    }
-
-    if (this._pitEl) {
-      Object.assign(this._pitEl.style, {
-        left: (250 * this._scaleX) + 'px',
-        top: (top + 340 * this._scaleY) + 'px',
-        width: (80 * this._scaleX) + 'px',
-        height: (32 * this._scaleY) + 'px',
-      });
     }
 
     if (this._flagPoleEl) {
