@@ -86,6 +86,36 @@ Our goal was to teach our classmates how to make a functional platformer game wi
 Help classmates implement our lesson into their levels
 
 
+{% capture astro_challenge %}
+Astro Platformer Game Runner
+{% endcapture %}
+
+{% capture astro_code %}
+import { GameControl } from '@assets/js/GameEnginev1.1/essentials/Imports.js';
+import AstroStory from '@assets/js/projects/astronaut-platformer-game/levels/astrostory.js';
+import AstroMeteor from '@assets/js/projects/astronaut-platformer-game/levels/astrometeor.js';
+import AstroMaze from '@assets/js/projects/astronaut-platformer-game/levels/astromaze.js';
+import AstroPlatformer from '@assets/js/projects/astronaut-platformer-game/levels/astroplatformer.js';
+import AstroDeath from '@assets/js/projects/astronaut-platformer-game/levels/astrodeath.js';
+import AstroMusic from '@assets/js/projects/astronaut-platformer-game/levels/astromusic.js';
+
+const astroMusicApi = new AstroMusic();
+astroMusicApi.addGestureListeners();
+
+export const gameLevelClasses = [AstroStory, AstroMeteor, AstroMaze, AstroPlatformer, AstroDeath];
+export { GameControl };
+{% endcapture %}
+
+{% include runners/game.html
+   runner_id="astro-platformer-runner"
+   challenge=astro_challenge
+   code=astro_code
+   hide_edit="true"
+   width="100%"
+   height="520px"
+%}
+
+
 
 
 

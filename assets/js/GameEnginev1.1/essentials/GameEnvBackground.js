@@ -26,13 +26,12 @@ export class GameEnvBackground extends GameObject {
         const width = this.gameEnv.innerWidth;
         const height = this.gameEnv.innerHeight;
 
-        if (this.image) {
-            // Draw the background image scaled to the canvas size
+        // Base fill prevents a black flash/box while the image loads or fails
+        ctx.fillStyle = '#063970';
+        ctx.fillRect(0, 0, width, height);
+
+        if (this.image && this.image.complete && this.image.naturalWidth > 0) {
             ctx.drawImage(this.image, 0, 0, width, height);
-        } else {
-            // Fill the canvas with fillstyle color if no image is provided
-            ctx.fillStyle = '#063970';
-            ctx.fillRect(0, 0, width, height);
         }
     }
 

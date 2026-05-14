@@ -12,8 +12,8 @@ Hi! My name is Krish Kelageri.
 |--------------|----------|-------------------------------------|-----------------------|-----------|
 | Scrum Master | John     | github.com/jm1021/student           | upstream (OCS fork)   | student   |
 | Scrummer     | Krish    | github.com/TheCoder203/student      | downstream (fork)     | student   |
-| Scrummer     | Vihaan   | github.com/veen456/student          | downstream (fork)     | student   |
-| Scrummer     | Pranay   | github.com/pkdev0101/student        | downstream (fork)     | student   |
+| Scrummer     | Jasan    | github.com/Jas-Bop/student          | downstream (fork)     | student   |
+| Scrummer     | Aarnav   | github.com/Aarnav-Jain/student      | downstream (fork)     | student   |
 
 
 ## Links to Learning

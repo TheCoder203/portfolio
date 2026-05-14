@@ -11,10 +11,10 @@ class FixedPlatformerCoin extends Coin {
 
   collect() {
     if (this.collected) return;
-    this.collected = true;  // Mark as collected first to prevent re-triggering
     if (typeof this.interact === 'function') {
       this.interact.call(this);
     }
+    this.collected = true;
     if (this.canvas) {
       this.canvas.style.opacity = '0';
       this.canvas.style.transition = 'opacity 0.3s';
@@ -313,6 +313,10 @@ this.classes = [
 this.initialize = () => {
   const container = gameEnv.container || gameEnv.gameContainer;
   if (!container) return;
+  if (container.style) {
+    container.style.background = 'transparent';
+    container.style.backgroundColor = 'transparent';
+  }
 
   gameEnv.stats = gameEnv.stats || {};
   const storedCoins = parseInt(localStorage.getItem('coinsCollected') || '0') || 0;
