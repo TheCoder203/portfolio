@@ -44,27 +44,13 @@ Hi! My name is Krish Kelageri.
 
 <br>
 
-### My Lessons
+### College Ready
 
-> Foundations in Tech are essential, click to see some of my lesson creations.
+> click the button below to see my College Ready Completions!
 
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <a href="{{site.baseurl}}/gravity_blog" style="text-decoration: none;">
-        <div style="background-color: var(--green); color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           Doc
-        </div>
-    </a>
-    <a href="{{site.baseurl}}/allhw" style="text-decoration: none;">
-        <div style="background-color: var(--blue); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           All Homeworks
-        </div>
-    </a>
-    <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration: none;">
-        <div style="background-color: var(--warn); color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           Lesson
-        </div>
-    </a>
+    <
     <a href="{{site.baseurl}}/table" style="text-decoration: none;">
         <div style="background-color: var(--orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
            Table
