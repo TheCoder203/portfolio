@@ -6,39 +6,18 @@ permalink: /gameplay-testing
 
 ### Gameplay Testing
 
-This page contains quick buttons for every row in the assessment table.
+AstroPlatformer is tested in the code by checking coin collection, player death, and goal logic. That kind of test thinking is what keeps the level from having obvious bugs when it runs in the browser.
 
-<div style="display:flex;flex-wrap:wrap;gap:10px;">
-<a href="{{site.baseurl}}/writing-classes" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Writing Classes</div></a>
-<a href="{{site.baseurl}}/methods-parameters" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Methods & Parameters</div></a>
-<a href="{{site.baseurl}}/instantiation-objects" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Instantiation & Objects</div></a>
-<a href="{{site.baseurl}}/inheritance-basic" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Inheritance (Basic)</div></a>
-<a href="{{site.baseurl}}/method-overriding" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Method Overriding</div></a>
-<a href="{{site.baseurl}}/constructor-chaining" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Constructor Chaining</div></a>
-<a href="{{site.baseurl}}/iteration" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Iteration</div></a>
-<a href="{{site.baseurl}}/conditionals" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Conditionals</div></a>
-<a href="{{site.baseurl}}/nested-conditions" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Nested Conditions</div></a>
-<a href="{{site.baseurl}}/numbers" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Numbers</div></a>
-<a href="{{site.baseurl}}/strings" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Strings</div></a>
-<a href="{{site.baseurl}}/booleans" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Booleans</div></a>
-<a href="{{site.baseurl}}/arrays" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Arrays</div></a>
-<a href="{{site.baseurl}}/objects-json" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Objects (JSON)</div></a>
-<a href="{{site.baseurl}}/mathematical-operators" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Mathematical Operators</div></a>
-<a href="{{site.baseurl}}/string-operations" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">String Operations</div></a>
-<a href="{{site.baseurl}}/boolean-expressions" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Boolean Expressions</div></a>
-<a href="{{site.baseurl}}/keyboard-input" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Keyboard Input</div></a>
-<a href="{{site.baseurl}}/canvas-rendering" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Canvas Rendering</div></a>
-<a href="{{site.baseurl}}/gameenv-configuration" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">GameEnv Configuration</div></a>
-<a href="{{site.baseurl}}/api-integration" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">API Integration</div></a>
-<a href="{{site.baseurl}}/asynchronous-io" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Asynchronous I/O</div></a>
-<a href="{{site.baseurl}}/json-parsing" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">JSON Parsing</div></a>
-<a href="{{site.baseurl}}/code-comments" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Code Comments</div></a>
-<a href="{{site.baseurl}}/documentation" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Documentation</div></a>
-<a href="{{site.baseurl}}/console-debugging" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Console Debugging</div></a>
-<a href="{{site.baseurl}}/hit-box-visualization" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Hit Box Visualization</div></a>
-<a href="{{site.baseurl}}/gameplay-testing" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Gameplay Testing</div></a>
-<a href="{{site.baseurl}}/integration-testing" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">Integration Testing</div></a>
-<a href="{{site.baseurl}}/api-error-handling" style="text-decoration:none;"><div style="background-color: var(--blue); color: white; padding: 10px 16px; border-radius: 6px; font-weight:bold; display:inline-block;">API Error Handling</div></a>
+```javascript
+if (pcx > fx-14*this._scaleX && pcx < fx+30*this._scaleX && pcy > fy && pcy < fy+58*this._scaleY) {
+    self._winLevel();
+    return;
+  }
+```
+
+In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this snippet checks whether the player has reached the goal flag and then triggers the level win sequence, which is a core part of gameplay correctness.
+
+<div style="display:flex;gap:10px;flex-wrap:wrap;">
+  <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
+  <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
 </div>
-
-[Back to Table]({{site.baseurl}}/table)
