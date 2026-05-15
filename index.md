@@ -50,10 +50,9 @@ Hi! My name is Krish Kelageri.
 
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <
     <a href="{{site.baseurl}}/table" style="text-decoration: none;">
         <div style="background-color: var(--orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: transform 0.2s, box-shadow 0.2s;">
-           Table
+           Completions
         </div>
     </a>
 </div>
