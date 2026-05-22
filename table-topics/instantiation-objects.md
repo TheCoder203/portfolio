@@ -6,6 +6,8 @@ permalink: /instantiation-objects
 
 ### Instantiation & Objects
 
+Using new turns a class into an actual object. Like baking a real cookie from the cutter. Every new Car(...) is its own separate car with its own color.
+
 The level creates actual runtime objects like the leaderboard and coin instances when the game starts. Each new object gets its own state and behavior, which is how the code turns definitions into real gameplay elements.
 
 ```javascript

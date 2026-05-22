@@ -5,6 +5,7 @@ permalink: /methods-parameters
 ---
 
 ### Methods & Parameters
+ A method is a function inside a class. Parameters are the inputs it needs. Like telling a dog to "fetch" a specific ball — "fetch" is the method, the ball is the parameter.
 
 A method like new Leaderboard(...) takes parameters that tell it how the game should behave, including the game name and visibility settings. Passing those values in makes the same code reusable for different levels or games.
 

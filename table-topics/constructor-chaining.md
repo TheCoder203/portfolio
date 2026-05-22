@@ -6,6 +6,10 @@ permalink: /constructor-chaining
 
 ### Constructor Chaining
 
+super() runs the parent class's constructor first, then the child adds its own stuff. Like filling out a base form before adding your own extra fields.
+
+
+
 The level object starts by setting up its constructor state, which is the first step in building a platformer instance. That constructor sets defaults and prepares the game for all the later logic that depends on those values.
 
 ```javascript

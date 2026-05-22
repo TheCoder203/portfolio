@@ -6,6 +6,8 @@ permalink: /writing-classes
 
 ### Writing Classes
 
+Like a cookie cutter. You define the shape once, then stamp out as many cookies (objects) as you want. In the game, GameLevel3 is a class — it defines how the level works.
+
 AstroPlatformer organizes behavior into classes for the level and the special coin objects. That object-oriented structure keeps platformer logic grouped together and easier to extend.
 
 ```javascript
