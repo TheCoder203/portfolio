@@ -6,27 +6,80 @@ permalink: /constructor-chaining
 
 ### Constructor Chaining
 
-super() runs the parent class's constructor first, then the child adds its own stuff. Like filling out a base form before adding your own extra fields.
+In object-oriented programming, **constructor chaining** is a powerful architectural pattern where a constructor invokes another constructor within the same class hierarchy. When dealing with class inheritance, a derived (child) class must call the constructor of its base (parent) class before initializing its own fields. 
 
+This initialization link is forged using the `super()` keyword. Executing `super()` ensures that all core infrastructure, standard environments, and state variables belonging to the parent entity are built first. Think of it like filling out a mandatory baseline registration form before you are allowed to add your own custom, specialized fields on top. In JavaScript, invoking `super()` is not optional; failing to call it in a sub-class constructor before accessing `this` throws a runtime reference error, as the engine requires the foundational blueprint to exist before appending additions.
 
+---
+
+### Implementing the Base Initialization
 
 The level object starts by setting up its constructor state, which is the first step in building a platformer instance. That constructor sets defaults and prepares the game for all the later logic that depends on those values.
 
 ```javascript
 class AstroPlatformer {
+  /**
+   * Base constructor for the core game engine environment.
+   * @param {Object} gameEnv - Contains configurations, paths, and window boundaries.
+   */
   constructor(gameEnv) {
-    const path = gameEnv.path;
-    const width = gameEnv.innerWidth;
-    const height = gameEnv.innerHeight;
-    ...
+    if (!gameEnv) {
+      throw new Error("Initialization Failed: a valid game environment object is required.");
+    }
+
+    // Extracting global environment parameters
+    this.path = gameEnv.path;
+    this.width = gameEnv.innerWidth || window.innerWidth;
+    this.height = gameEnv.innerHeight || window.innerHeight;
+
+    // Establishing universal state variables for any active stage
+    this.gravity = 0.5;
+    this.score = 0;
+    this.isGameOver = false;
+    this.entities = []; // Array containing elements like players, floors, and obstacles
+
+    console.log(`[AstroPlatformer Engine] Base configuration initialized (${this.width}x${this.height}).`);
+  }
+
+  /**
+   * Initiates the standard engine processes.
+   */
+  initEngineLoop() {
+    console.log(`Starting loop execution using gravity constant: ${this.gravity}`);
   }
 }
-```
 
-In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, the constructor sets up the level state, screen scaling, and default variables so everything else has the right context when the game starts.
+/**
+ * Child class demonstrating Constructor Chaining via standard inheritance.
+ */
+class NebulaSector extends AstroPlatformer {
+  /**
+   * Custom level builder extending the baseline platformer settings.
+   * @param {Object} gameEnv - Passed upstream to configure foundational values.
+   * @param {String} stageTheme - A visual and stylistic tag unique to this instance.
+   */
+  constructor(gameEnv, stageTheme) {
+    // 1. Chain constructors by calling super(). This sets up engine parameters first.
+    super(gameEnv);
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-  <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
-  <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
-  <a href="{{site.baseurl}}/constructor-chaining-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
-</div>
+    // 2. Safely introduce child class properties now that 'this' is instantiated.
+    this.levelTheme = stageTheme || "Default Space Grid";
+    this.enemySpawnRate = 2.5;
+    this.isLevelCleared = false;
+
+    console.log(`[Level Extension] '${this.levelTheme}' successfully chained to base engine.`);
+  }
+
+  /**
+   * Overrides and enhances the default initiation logic.
+   */
+  initEngineLoop() {
+    super.initEngineLoop(); // Run the parent's logic first to maintain consistency
+    console.log(`Injecting theme assets and spawning background layers for: ${this.levelTheme}`);
+  }
+}
+
+// Sample Initialization demonstrating the pattern in action
+const mockEnvironment = { path: "/assets/game/sprites/", innerWidth: 1920, innerHeight: 1080 };
+const activeStage = new NebulaSector(mockEnvironment, "Cosmic Horizon");
+activeStage.initEngineLoop();

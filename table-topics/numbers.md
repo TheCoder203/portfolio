@@ -6,19 +6,44 @@ permalink: /numbers
 
 ### Numbers
 
-Numbers are what define the platformer level dimensions, object positions, and movement thresholds. Everything from the flag location to the coin size is controlled with numeric values.
+In computer programming, **numbers** are a primary data type used to represent quantitative values, track states, and drive algorithmic calculations. Numbers are what define the platformer level dimensions, object positions, and movement thresholds. Everything from the flag location to the coin size is controlled with numeric values.
+
+Within a game engine, numbers are categorized generally into integers (whole numbers) and floating-point numbers (decimals). These data primitives act as the bedrock of the entire simulation. Without them, an engine cannot track passing frames, measure velocities, increment player scores, or map coordinates onto a two-dimensional visual grid.
+
+---
+
+### Defining Screen Geometry with Numeric Constants
+
+In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural definition block uses precise numbers to calculate proportional screen scaling values across different displays:
 
 ```javascript
-const baseWidth = 650;
-const baseHeight = 400;
-const scaleX = width / baseWidth;
-const scaleY = height / baseHeight;
+/**
+ * Quantifies game viewport measurements to establish an internal physics coordinate system.
+ * Demonstrates the application of integer constants and floating-point evaluation.
+ *
+ * @param {number} width - The active, real-time horizontal boundary of the browser window.
+ * @param {number} height - The active, real-time vertical boundary of the browser window.
+ */
+function configureViewportMetrics(width, height) {
+  // 1. Establish reference dimensions as immutable integer values
+  const baseWidth  = 650; // Reference width in pixels
+  const baseHeight = 400; // Reference height in pixels
+
+  // 2. Perform division to output floating-point ratio multipliers
+  const scaleX = width / baseWidth;
+  const scaleY = height / baseHeight;
+
+  // 3. Store the numeric results inside an environmental state block
+  this.engineMetrics = {
+    canvasWidth: width,
+    canvasHeight: height,
+    horizontalScale: scaleX,
+    verticalScale: scaleY
+  };
+
+  console.log(`[Numbers Engine] Calculated floating-point scale: X=${scaleX.toFixed(4)}, Y=${scaleY.toFixed(4)}`);
+}
 ```
+In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these numeric constants define the level dimensions and scale factors, which are the foundation for positioning and sizing every object in the game. 
 
-In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these numeric constants define the level dimensions and scale factors, which are the foundation for positioning and sizing every object in the game.
-
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-  <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
-  <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
-  <a href="{{site.baseurl}}/numbers-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
-</div>
+By setting baseWidth to exactly 650 and baseHeight to exactly 400, the engine establishes a reliable mathematical baseline for the virtual world. When the code divides the active screen width and height by these base constants, it generates precise decimal scale values like 1.5 or 0.85. These floating-point numbers then act as multipliers across the rest of the script, instantly shrinking or stretching speed variables, jump gravity, and interaction boundaries to match the target device. Relying on numbers to drive layout constraints prevents the game assets from bunching up or breaking apart when loaded inside a mobile app or a desktop browser window. This mathematical consistency forms the framework for reliable collision rules, ensuring that a jump distance calculated in your logic remains consistent for every user.
