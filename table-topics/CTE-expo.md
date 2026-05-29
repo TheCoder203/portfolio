@@ -1,6 +1,6 @@
 ---
 layout: post
-title: API Error Handling
+title: CTE Expo
 permalink: /cte-expo
 ---
 
