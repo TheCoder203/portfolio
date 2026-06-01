@@ -12,6 +12,11 @@ Rather than relying entirely on manual playtesting, modern web engines programma
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Validating Goal Conditions via Bounding Box Triggers
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This segment validates spatial intersections to confirm whether a player has completed the objective:
@@ -42,6 +47,13 @@ function checkLevelCompletion(pcx, pcy, fx, fy) {
   return false; // Player is not within the completion trigger zone
 }
 ```
+---
+### Quick Example
+
+```javascript
+console.log('Quick example for Gameplay Testing');
+```
+
 In AstroPlatformer, this snippet checks whether the player has reached the goal flag and then triggers the level win sequence, which is a core part of gameplay correctness. 
 
 By examining this equation, we see how the test conditions use this._scaleX and this._scaleY to scale the target hitbox alongside changing window resolutions. Testing this logic confirms that regardless of frame rate stutter or monitor size, the collision coordinates line up properly, preventing players from clipping straight through the finish line without completing the level. 

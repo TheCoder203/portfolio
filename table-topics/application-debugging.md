@@ -35,12 +35,24 @@ Application debugging helps developers inspect and manage this data safely.
 
 ---
 
+---
+### Why it matters
+
+Clear debugging and documentation habits make the game easier to maintain and fix when issues arise.
+
 ### localStorage Example
 
 Example:
 
 ```javascript id="appdbg1"
 localStorage.setItem('highScore', 1200);
+---
+### Quick Example
+
+```javascript
+console.log('Player position:', player.x, player.y);
+```
+
 
 const score = localStorage.getItem('highScore');
 

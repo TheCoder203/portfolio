@@ -441,6 +441,17 @@ Without conditionals, the game could not react intelligently to changing situati
 
 Conditionals are one of the most essential building blocks of programming, interactivity, and game development.
 
+---
+### Quick Example
+
+```javascript
+if (player.x > flag.x - 10) {
+  if (player.y > flag.y - 10) {
+    winLevel();
+  }
+}
+```
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
   <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>

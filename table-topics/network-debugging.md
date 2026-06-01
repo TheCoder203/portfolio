@@ -39,6 +39,11 @@ Network debugging helps developers inspect:
 
 ---
 
+---
+### Why it matters
+
+This concept is essential for connecting the game to external data and keeping persistent state reliable.
+
 ### HTTP Requests in JavaScript
 
 JavaScript applications commonly use `fetch()`.
@@ -47,6 +52,16 @@ Example:
 
 ```javascript id="netdbg1"
 fetch('/api/player')
+---
+### Quick Example
+
+```javascript
+fetch('/api/status')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+```
+
   .then(response => response.json())
   .then(data => {
     console.log(data);

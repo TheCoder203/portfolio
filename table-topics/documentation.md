@@ -12,6 +12,21 @@ Effective documentation transforms complex, abstract algorithms into maintainabl
 
 ---
 
+---
+### Why it matters
+
+Clear debugging and documentation habits make the game easier to maintain and fix when issues arise.
+---
+### Quick Example
+
+```javascript
+// This function updates the player's position each frame.
+function updatePlayer(player) {
+  player.x += player.vx;
+}
+```
+
+
 ### Comprehensive Architecture Comments
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The header blocks serve as a operational map for the script's inner functions:

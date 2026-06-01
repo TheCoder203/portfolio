@@ -34,9 +34,27 @@ Element inspection helps developers identify these issues visually.
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Inspecting HTML Structure
 
 Example HTML:
+
+---
+### Quick Example
+
+```javascript
+async function saveProgress(data) {
+  const response = await fetch('/api/save', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+```
 
 ```html id="elemdbg1"
 <div class="player-ui">

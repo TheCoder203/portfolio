@@ -12,6 +12,24 @@ By utilizing a centralized environment object instead of hardcoded numbers, the 
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+---
+### Quick Example
+
+```javascript
+async function saveProgress(data) {
+  const response = await fetch('/api/save', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+```
+
+
 ### Managing Environment Metrics and Base Aspect Ratios
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This code reads the game environment dimensions and constructs the level scaling, which helps the platformer adapt to different screen sizes.

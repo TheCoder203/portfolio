@@ -12,6 +12,11 @@ The level creates actual runtime objects like the leaderboard and coin instances
 
 ---
 
+---
+### Why it matters
+
+Structured object code makes the game engine easier to expand and reduces repeated logic as the codebase grows.
+
 ### Executing Object Construction at Runtime
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The code initializes critical score tracking systems by spinning up a persistent object reference:
@@ -34,6 +39,25 @@ function initializeStageComponents(gameEnv) {
 
   console.log(`[Instantiation] Leaderboard tracking active for: ${this._leaderboard.gameName}`);
   console.log(`[Instantiation] Multi-object state check: CoinA ID is '${this.coinA.id}', CoinB ID is '${this.coinB.id}'`);
+---
+### Quick Example
+
+```javascript
+class GameObject {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Player extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.health = 100;
+  }
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this code creates the leaderboard instance when the game starts, turning configuration values into a live object used throughout the level. By using the new keyword alongside the Leaderboard class reference, the JavaScript engine allocates a unique block of system memory specifically to hold that object's inner state variables, such as its active database connection details and visual DOM layout flags. 

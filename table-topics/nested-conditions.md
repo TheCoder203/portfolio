@@ -12,6 +12,11 @@ Using layered or compound logical evaluations acts as a filter for complex workf
 
 ---
 
+---
+### Why it matters
+
+Understanding nested conditions helps prevent invalid game states and makes gameplay logic easier to reason about.
+
 ### Implementing Multi-Layered Validation Guards
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural block runs sequential safety checks to sync stats and confirm level completion requirements:
@@ -41,6 +46,17 @@ function processLevelMilestones(pcx, pcy, fx, fy, totalCoins) {
       }
     }
   }
+---
+### Quick Example
+
+```javascript
+if (player.x > flag.x - 10) {
+  if (player.y > flag.y - 10) {
+    winLevel();
+  }
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these nested checks first verify the score manager exists and then test whether the player reached the goal, which prevents invalid operations and handles game logic safely. 

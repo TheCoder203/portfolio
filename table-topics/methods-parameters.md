@@ -12,6 +12,11 @@ Using methods with parameters allows developers to write highly flexible, modula
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Passing Configuration Arguments to Objects
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The instantiation mechanism uses parameter passing to set up structural components with specific baseline rules:
@@ -46,6 +51,13 @@ class Leaderboard {
 const activeLeaderboard = new Leaderboard(gameEnv.gameControl, {
   gameName: 'astronaut-platformer-game',
   initiallyHidden: false
+---
+### Quick Example
+
+```javascript
+console.log('Quick example for Methods & Parameters');
+```
+
 });
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this constructor call passes configuration parameters into the leaderboard so it knows the game name and whether to show itself immediately. By isolating these configuration points into an options object parameter, the inner architecture of the Leaderboard class remains independent of any single, specific level blueprint. The execution engine reads the gameName string and the initiallyHidden boolean directly from the incoming arguments, allowing it to modify the visual layout properties during the initial setup phase. 

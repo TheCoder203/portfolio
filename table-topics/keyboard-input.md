@@ -12,6 +12,11 @@ Without an efficient asynchronous event listener pattern, a game would have to c
 
 ---
 
+---
+### Why it matters
+
+Good input handling makes the game responsive and avoids missed key presses during fast action.
+
 ### Registering Global Event Listeners for Movement Controls
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural registration line binds hardware keystrokes directly to the internal physics management methods:
@@ -62,6 +67,15 @@ function _keyDown(event) {
       // Ignore unrelated key inputs silently to optimize processing paths
       break;
   }
+---
+### Quick Example
+
+```javascript
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowLeft') player.vx = -5;
+});
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this line attaches a keydown event listener so the game can respond immediately when the player presses movement keys. By leveraging document.addEventListener, the engine creates a direct pipeline between the operating system's hardware layer and the runtime memory state of the platformer. 

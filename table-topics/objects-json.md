@@ -12,6 +12,11 @@ Structuring game parameters as data-driven objects allows developers to decouple
 
 ---
 
+---
+### Why it matters
+
+This concept is essential for connecting the game to external data and keeping persistent state reliable.
+
 ### Object Lookup and Key-Value Pairing
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The level matches coin definitions against game objects using structured sprite data, which is essentially a JSON-style object lookup. That shows how data shapes connect to runtime objects in the game.
@@ -35,6 +40,14 @@ function bindConfigurationToRuntimeObject(c, gameEnv) {
   c._coinObject = coinObject || null;
 
   console.log(`[JSON Objects] Linked database ID "${c.id}" to live engine entity: ${c._coinObject !== null}`);
+---
+### Quick Example
+
+```javascript
+const config = JSON.parse(rawJson);
+console.log(config.level, config.score);
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this snippet looks up a matching game object by ID from a list, which is how structured object data is connected to the running game state. 

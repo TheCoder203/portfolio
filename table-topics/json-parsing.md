@@ -12,6 +12,11 @@ Without these transformation routines, saving user progress would be impossible 
 
 ---
 
+---
+### Why it matters
+
+This concept is essential for connecting the game to external data and keeping persistent state reliable.
+
 ### Managing Persistent State via Serialization and Type Conversion
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This routine manages the storage lifecycle of collectible tokens by safely reading, modifying, and updating progress keys:
@@ -37,6 +42,14 @@ function updatePersistentCoinCount() {
   localStorage.setItem('coinsCollected', String(newTotal));
 
   console.log(`[Storage Engine] Local ledger updated. Prior: ${savedCoins} | Appended: ${this.value} | New Total: ${newTotal}`);
+---
+### Quick Example
+
+```javascript
+const config = JSON.parse(rawJson);
+console.log(config.level, config.score);
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this code reads the saved coin total from localStorage, converts it from text to a number, and stores the updated value again, which makes persistent state usable in gameplay. By using parseInt() along with defensive safety nets, the script actively prevents raw string data from poisoning the arithmetic systems of the platformer. When the engine executes savedCoins + this.value, it can confidently add the values together as pure numbers rather than accidentally matching text chains. O

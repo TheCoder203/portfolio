@@ -380,3 +380,10 @@ The logging system ensures that:
 - Logs help track game state and errors
 
 Console debugging is one of the most important tools in programming and is essential for building reliable games and applications.
+---
+### Quick Example
+
+```javascript
+console.log('Player position:', player.x, player.y);
+```
+

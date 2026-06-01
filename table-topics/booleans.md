@@ -433,6 +433,15 @@ Without booleans, the game would struggle to track object states efficiently.
 
 Booleans are one of the most essential building blocks of programming and interactive game systems.
 
+---
+### Quick Example
+
+```javascript
+if (player.health <= 0) {
+  endGame();
+}
+```
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
   <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>

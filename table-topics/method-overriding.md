@@ -12,6 +12,11 @@ When a method is overridden, the child class version of the method takes precede
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Overriding Lifecycle Methods for Custom Behavior
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This specific section of the class definition replaces standard parent behaviors with rules structured around collectibles:
@@ -53,6 +58,25 @@ class FixedPlatformerCoin extends BaseGameObject {
 
     console.log(`[Method Overriding] Custom collect sequence completed for Coin ID: ${this.id}`);
   }
+---
+### Quick Example
+
+```javascript
+class GameObject {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Player extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.health = 100;
+  }
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, the custom coin class overrides base methods so it can draw itself and count a collection in a platformer-specific way. By examining this structural implementation, you can see how overriding intercepts the generic lifecycle loop to implement custom rules. When the parent game loop sweeps through all registered entities and calls .update() or .collect(), the engine automatically bypasses the basic placeholder code in the base class and jumps straight into these custom lines instead. 

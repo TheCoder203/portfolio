@@ -12,6 +12,11 @@ In a modern web application or game engine, different features—such as UI rend
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Verifying Module Interaction and Optional Dependencies
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This validation block illustrates how the game checks for module integration before firing specific updates:
@@ -37,6 +42,19 @@ function syncGameplayStats(totalCoins, gameEnv) {
   // Alternative fallback routine if the dependency is missing or failed to initialize
   console.warn("[Integration Test] Warning: scoreManager or updateScoreDisplay is unavailable. Skipping UI sync.");
   return false;
+---
+### Quick Example
+
+```javascript
+async function saveProgress(data) {
+  const response = await fetch('/api/save', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet checks for the score manager before updating it, which is an integration-style guard that keeps the game functioning when not all services are present. By examining this equation, we can see how the application guards its critical run-time path against external failures using defensive code architecture. 

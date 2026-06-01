@@ -12,6 +12,11 @@ Within a game engine, numbers are categorized generally into integers (whole num
 
 ---
 
+---
+### Why it matters
+
+These fundamentals keep rendering and game logic precise across different screens and player actions.
+
 ### Defining Screen Geometry with Numeric Constants
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural definition block uses precise numbers to calculate proportional screen scaling values across different displays:
@@ -42,6 +47,14 @@ function configureViewportMetrics(width, height) {
   };
 
   console.log(`[Numbers Engine] Calculated floating-point scale: X=${scaleX.toFixed(4)}, Y=${scaleY.toFixed(4)}`);
+---
+### Quick Example
+
+```javascript
+const scale = width / 650;
+const jumpHeight = baseJump * scale;
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these numeric constants define the level dimensions and scale factors, which are the foundation for positioning and sizing every object in the game. 

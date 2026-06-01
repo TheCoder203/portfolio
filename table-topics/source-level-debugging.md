@@ -46,6 +46,11 @@ This is extremely important in game engines because bugs often occur during real
 
 ---
 
+---
+### Why it matters
+
+Clear debugging and documentation habits make the game easier to maintain and fix when issues arise.
+
 ### What Is a Breakpoint?
 
 A breakpoint tells the browser to pause code execution at a specific line.
@@ -63,6 +68,13 @@ Example:
 function updatePlayer(player) {
   player.x += player.speed;
   player.y += player.velocityY;
+
+---
+### Quick Example
+
+```javascript
+console.log('Player position:', player.x, player.y);
+```
 
   debugger;
 

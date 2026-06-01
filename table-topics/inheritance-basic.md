@@ -12,6 +12,11 @@ By structuring systems around a primary parent class, developers avoid duplicati
 
 ---
 
+---
+### Why it matters
+
+Structured object code makes the game engine easier to expand and reduces repeated logic as the codebase grows.
+
 ### Overriding Methods in a Derived Subclass
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This implementation demonstrates how a subclass safely overrides its parent's methods to alter frame-by-frame updates:
@@ -50,6 +55,25 @@ class FixedPlatformerCoin extends Coin {
 
     console.log(`[Inheritance Basic] FixedPlatformerCoin ID: ${this.id} collected. Score modified.`);
   }
+---
+### Quick Example
+
+```javascript
+class GameObject {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Player extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.health = 100;
+  }
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, the fixed-platformer coin class extends the base coin class and customizes its update and collect behavior for this level. Rather than rebuilding asset variables or standard horizontal and vertical positioning systems from scratch, FixedPlatformerCoin relies directly on the properties established inside the original parent Coin object template. By overriding the update() loop, the child class controls exactly when it displays itself on screen without modifying the core collection engine rules. 

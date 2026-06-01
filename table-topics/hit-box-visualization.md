@@ -12,6 +12,11 @@ Without drawing these bounding lines, developers would be forced to guess why an
 
 ---
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 ### Linking Entities to Collision Bounds
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural search routine establishes an interactive link between a data-driven configuration node and an active game engine entity:
@@ -38,6 +43,19 @@ function bindCollisionToVisualAsset(c, gameEnv) {
   }
 }
 ```
+---
+### Quick Example
+
+```javascript
+async function saveProgress(data) {
+  const response = await fetch('/api/save', {
+    method: 'POST',
+    body: JSON.stringify(data)
+  });
+  return response.json();
+}
+```
+
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this code finds the coin object linked to each collision box and stores the reference, which helps the game connect visual objects to collision logic. 
 
 By saving this explicit link directly to the object configuration under c._coinObject, the rendering system can easily grab data from the physical collision grid and match it perfectly with the active animated frames. This setup ensures that when the rendering engine checks for overlapping bounds, it can draw a perfect wireframe outline precisely over the moving target. Utilizing this linked architecture means you don't waste system resources running separate search loops every single frame during the game tick. 

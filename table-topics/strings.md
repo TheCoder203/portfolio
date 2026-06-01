@@ -12,6 +12,11 @@ Without strings, a game would be a silent, numeric simulation completely lacking
 
 ---
 
+---
+### Why it matters
+
+These fundamentals keep rendering and game logic precise across different screens and player actions.
+
 ### Creating and Assigning DOM Text Elements
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This structural layout section builds a physical interface element and injects a static text string directly into the viewport markup:
@@ -40,6 +45,14 @@ function displayStageGoalSignpost() {
 
   // Append the newly created text block into the global game container
   document.getElementById('game-container').appendChild(goalLbl);
+---
+### Quick Example
+
+```javascript
+const name = 'Astro';
+console.log(`Hello, ${name}!`);
+```
+
 
   console.log(`[Strings Engine] Successfully rendered signpost with value string: "${goalLbl.textContent}"`);
 }

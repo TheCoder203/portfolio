@@ -12,6 +12,11 @@ AstroPlatformer organizes behavior into classes for the level and the special co
 
 ---
 
+---
+### Why it matters
+
+Structured object code makes the game engine easier to expand and reduces repeated logic as the codebase grows.
+
 ### Encapsulating Behaviors within Class Templates
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This segment establishes structural object classes to govern the global world engine and individual collectible tokens:
@@ -50,6 +55,25 @@ class FixedPlatformerCoin extends Coin {
     this.value = 100;
     this.collected = false;
   }
+---
+### Quick Example
+
+```javascript
+class GameObject {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Player extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.health = 100;
+  }
+}
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these class definitions organize the game into reusable objects and give each behavior a clear place in the level code. By declaring class AstroPlatformer and class FixedPlatformerCoin, the codebase shifts from linear script execution into a highly modular, object-oriented runtime architecture. The constructor functions inside these blocks run instantly the exact moment a developer uses the new keyword, setting up unique variable fields like this.isActive and this.collected in isolated memory sectors. 

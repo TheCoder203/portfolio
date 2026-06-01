@@ -12,6 +12,11 @@ Without iterative loops, scaling a game would be completely unmanageable. If a l
 
 ---
 
+---
+### Why it matters
+
+Using iteration keeps level code concise and scalable when the game has many objects to update.
+
 ### Batch Processing via Sequential Enumeration
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This specific block cycles through an array of game platforms to dynamically inject layout changes directly into the user interface:
@@ -41,6 +46,15 @@ function updatePlatformLayouts(dynamicStyles) {
   
   console.log(`[Iteration Engine] Successfully updated configurations across all ${this._platforms.length} registered platforms.`);
 }
+---
+### Quick Example
+
+```javascript
+for (const item of items) {
+  update(item);
+}
+```
+
 ```
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, the loop updates every platform element in the level, which is how the game handles all of its objects efficiently without repeating code. By employing the modern for...of iteration syntax, the engine avoids the need to maintain manual tracking index counters or deal with messy array boundary edge cases. Instead, it extracts each platform object one by one from the array in an elegant, safe manner. 

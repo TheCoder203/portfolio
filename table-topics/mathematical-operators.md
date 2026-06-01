@@ -12,6 +12,11 @@ Without these operations, game environments would remain completely static and u
 
 ---
 
+---
+### Why it matters
+
+These fundamentals keep rendering and game logic precise across different screens and player actions.
+
 ### Executing Coordinate Scaling and Spatial Transforms
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This segment leverages standard arithmetic evaluation operators to scale, translate, and assign rendering positions to level assets:
@@ -46,6 +51,14 @@ function assignScaledCoordinates(p, width, height, top) {
   });
 
   console.log(`[Operators Engine] Scaled Platform: Left=${p.sx}px, Top=${finalTopPosition}px (Ratios: X=${scaleX.toFixed(2)}, Y=${scaleY.toFixed(2)})`);
+---
+### Quick Example
+
+```javascript
+const scale = width / 650;
+const jumpHeight = baseJump * scale;
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, these arithmetic calculations convert base layout values into scaled positions, which keeps the level sized correctly on different screens. By examining the equations, you can observe how the division operator (/) breaks down raw container dimensions into manageable scale multipliers, comparing the live width and height properties against standard fixed layout constants. 

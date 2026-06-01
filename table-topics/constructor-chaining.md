@@ -12,6 +12,30 @@ This initialization link is forged using the `super()` keyword. Executing `super
 
 ---
 
+---
+### Why it matters
+
+Structured object code makes the game engine easier to expand and reduces repeated logic as the codebase grows.
+---
+### Quick Example
+
+```javascript
+class GameObject {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Player extends GameObject {
+  constructor(x, y) {
+    super(x, y);
+    this.health = 100;
+  }
+}
+```
+
+
 ### Implementing the Base Initialization
 
 The level object starts by setting up its constructor state, which is the first step in building a platformer instance. That constructor sets defaults and prepares the game for all the later logic that depends on those values.

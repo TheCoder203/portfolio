@@ -402,6 +402,16 @@ The integration architecture also helps keep the game modular and expandable, ma
 
 Modern applications depend heavily on API integration to create connected, dynamic, and scalable user experiences.
 
+---
+### Quick Example
+
+```javascript
+fetch('/api/status')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+```
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
   <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>

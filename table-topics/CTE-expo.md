@@ -5,6 +5,11 @@ permalink: /cte-expo
 ---
 
 
+---
+### Why it matters
+
+This concept improves the game's structure and makes the code easier to read and maintain.
+
 # CTE Expo 2026
 
 **Date:** May 21
@@ -72,3 +77,10 @@ This event was really meaningful to me because it displayed a lto fo the flaws i
 ## Biggest Takeaway
 
 > My biggest takeaway is that success doesn't come from starting safe and planning everything out, you need to go big or go home.
+---
+### Quick Example
+
+```javascript
+console.log('Quick example for CTE Expo');
+```
+

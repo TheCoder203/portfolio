@@ -12,6 +12,11 @@ Without string formatting operations, programs could only display static text se
 
 ---
 
+---
+### Why it matters
+
+These fundamentals keep rendering and game logic precise across different screens and player actions.
+
 ### Constructing Dynamic Messages via Template Literals
 
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. This logging sequence utilizes JavaScript string interpolation to assemble a real-time debugging status update:
@@ -34,6 +39,14 @@ function handleCoinCollectionFeedback(newTotal) {
   // Example of using string manipulation to pad a status display for a retro user interface
   const paddedDisplayString = statusMessage.toUpperCase().padEnd(40, '.');
   console.log(`[HUD HUD Sync]: ${paddedDisplayString}`);
+---
+### Quick Example
+
+```javascript
+const name = 'Astro';
+console.log(`Hello, ${name}!`);
+```
+
 }
 ```
 In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this console log builds a text message with a template literal so the game can report the coin total in a readable way. By switching out old-fashioned string concatenation operators like + for modern backtick syntax (`), the engine reads the variable placeholder ${newTotal} and evaluates it directly inside the context of the sentence structure. This interpolation converts the numeric parameter into its string representation automatically, matching it flawlessly alongside the literal text characters without requiring explicit type casting blocks. Once formatted, this complete text packet feeds right into the console reporter, offering a neat, descriptive timeline of runtime operations while the developer tests mechanics. 

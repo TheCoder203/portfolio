@@ -406,6 +406,13 @@ Even though AstroPlatformer primarily uses DOM rendering, the core rendering pri
 
 Rendering systems are one of the core technologies behind interactive games, graphics engines, and modern web applications.
 
+---
+### Quick Example
+
+```javascript
+console.log('Quick example for Canvas Rendering');
+```
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
   <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
