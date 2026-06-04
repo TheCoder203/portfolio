@@ -6,7 +6,9 @@ permalink: /api-integration
 
 # API Integration
 
-Modern applications rarely operate completely on their own. Most software connects to external systems such as databases, authentication services, cloud storage, multiplayer servers, analytics tools, or leaderboard systems. The process of connecting an application to these outside systems is called API integration.
+Modern applications rarely operate completely on their own. Most software connects to external systems such as databases, authentication services, cloud storage, multiplayer servers, analytics tools, or leaderboard systems.
+
+The process of connecting an application to these outside systems is called API integration.
 
 An API (Application Programming Interface) allows different programs or services to communicate with each other. APIs make it possible for applications to exchange information, share data, and access features hosted on external systems.
 
@@ -72,10 +74,11 @@ fetch('/api/leaderboard')
 
 This example demonstrates the basic integration process:
 
-1. The application sends a request to an API
-2. The API responds with data
-3. The data is processed inside the application
-4. Errors are handled safely
+1. The application sends a request to an API 2.
+
+The API responds with data 3. The data is processed inside the application 4.
+
+Errors are handled safely
 
 This pattern appears throughout modern web development.
 
@@ -318,14 +321,7 @@ API integration appears everywhere in modern applications.
 
 Examples include:
 
-| Application Type | API Usage |
-|---|---|
-| Games | Leaderboards, multiplayer, saves |
-| Social Media | Posts, likes, messaging |
-| Streaming Services | Videos, recommendations |
-| Shopping Sites | Payments, inventory |
-| Maps | GPS and directions |
-| Weather Apps | Forecast data |
+| Application Type | API Usage | |---|---| | Games | Leaderboards, multiplayer, saves | | Social Media | Posts, likes, messaging | | Streaming Services | Videos, recommendations | | Shopping Sites | Payments, inventory | | Maps | GPS and directions | | Weather Apps | Forecast data |
 
 Most modern applications depend heavily on APIs.
 
@@ -417,3 +413,7 @@ fetch('/api/status')
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/api-integration-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Covers how games connect to external services (leaderboards, saves) using asynchronous API calls and configuration objects, including error handling and reuse patterns.

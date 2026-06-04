@@ -112,10 +112,11 @@ This code dynamically creates a visual banner object during gameplay.
 
 The game:
 
-1. Creates a new HTML element
-2. Applies visual styling
-3. Positions it on screen
-4. Attaches it to the game world
+1. Creates a new HTML element 2.
+
+Applies visual styling 3. Positions it on screen 4.
+
+Attaches it to the game world
 
 This is a rendering process similar to how canvas systems draw graphics dynamically.
 
@@ -305,14 +306,7 @@ Rendering systems display many types of game entities.
 
 Examples include:
 
-| Entity Type | Rendered Visual |
-|---|---|
-| Player | Character sprite |
-| Platform | Terrain block |
-| Coin | Collectible item |
-| Enemy | NPC sprite |
-| UI | Health bar |
-| Effects | Particles or animations |
+| Entity Type | Rendered Visual | |---|---| | Player | Character sprite | | Platform | Terrain block | | Coin | Collectible item | | Enemy | NPC sprite | | UI | Health bar | | Effects | Particles or animations |
 
 Every visible object in the game must be rendered somehow.
 
@@ -356,14 +350,7 @@ Rendering systems appear throughout modern software.
 
 Examples include:
 
-| Application | Rendering Type |
-|---|---|
-| Video Games | 2D/3D rendering |
-| Websites | DOM rendering |
-| Design Software | Vector rendering |
-| Simulations | Real-time graphics |
-| Mobile Apps | UI rendering |
-| Data Visualization | Dynamic chart rendering |
+| Application | Rendering Type | |---|---| | Video Games | 2D/3D rendering | | Websites | DOM rendering | | Design Software | Vector rendering | | Simulations | Real-time graphics | | Mobile Apps | UI rendering | | Data Visualization | Dynamic chart rendering |
 
 Rendering technology powers nearly all modern graphical applications.
 
@@ -418,3 +405,7 @@ console.log('Quick example for Canvas Rendering');
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/canvas-rendering-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Explains rendering concepts (DOM vs canvas), dynamic element creation, and rendering loops used to display and update game visuals in real time.

@@ -6,9 +6,13 @@ permalink: /api-error-handling
 
 # API Error Handling
 
-Modern applications constantly communicate with APIs (Application Programming Interfaces). APIs allow programs to exchange information with external systems such as databases, cloud storage, authentication systems, multiplayer servers, analytics tools, and leaderboards. In web development and game development, APIs are extremely important because they allow applications to access live and dynamic data.
+Modern applications constantly communicate with APIs (Application Programming Interfaces). APIs allow programs to exchange information with external systems such as databases, cloud storage, authentication systems, multiplayer servers, analytics tools, and leaderboards.
 
-However, APIs are never guaranteed to work perfectly every time. Servers may go offline, requests can time out, internet connections can fail, or invalid data may be returned unexpectedly. Because developers cannot control every external system, applications must be designed to handle these failures safely.
+In web development and game development, APIs are extremely important because they allow applications to access live and dynamic data.
+
+However, APIs are never guaranteed to work perfectly every time. Servers may go offline, requests can time out, internet connections can fail, or invalid data may be returned unexpectedly.
+
+Because developers cannot control every external system, applications must be designed to handle these failures safely.
 
 In AstroPlatformer, API error handling helps ensure that gameplay continues smoothly even if online systems fail. Instead of crashing the game when something goes wrong, the game catches the error and continues operating normally whenever possible.
 
@@ -293,13 +297,7 @@ APIs often return status codes that describe what happened during the request.
 
 Common status codes include:
 
-| Status Code | Meaning |
-|---|---|
-| 200 | Success |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Resource not found |
-| 500 | Internal server error |
+| Status Code | Meaning | |---|---| | 200 | Success | | 401 | Unauthorized | | 403 | Forbidden | | 404 | Resource not found | | 500 | Internal server error |
 
 Example:
 
@@ -428,3 +426,7 @@ fetch('/api/status')
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/api-error-handling-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Describes defensive API error handling patterns—try/catch, .catch(), fallbacks, and retries—to keep gameplay running when external services fail.

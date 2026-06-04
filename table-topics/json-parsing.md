@@ -6,9 +6,13 @@ permalink: /json-parsing
 
 ### JSON Parsing
 
-In web and game development, data persistence relies on converting complex runtime data structures into flat text formats for storage, and then reversing that process later. **JSON parsing** and type conversion are the mechanisms used to translate serialized string sequences back into functional, active data values that code can manipulate. AstroPlatformer reads saved coin totals from localStorage and turns that string into a number the game can use. Parsing JSON-style data or stored values is a key way to make text data useful in gameplay.
+In web and game development, data persistence relies on converting complex runtime data structures into flat text formats for storage, and then reversing that process later. **JSON parsing** and type conversion are the mechanisms used to translate serialized string sequences back into functional, active data values that code can manipulate.
 
-Without these transformation routines, saving user progress would be impossible because web-based storage solutions like `localStorage` are strictly limited to retaining plain text strings. If a developer attempts to use stored text directly in mathematical calculations, the program will perform string concatenation instead of numeric addition, turning a score of `5` plus `1` into `51` instead of `6`. Type casting and structured parsing provide a protective boundary, ensuring that external strings match the operational types required by internal engine subsystems.
+AstroPlatformer reads saved coin totals from localStorage and turns that string into a number the game can use. Parsing JSON-style data or stored values is a key way to make text data useful in gameplay.
+
+Without these transformation routines, saving user progress would be impossible because web-based storage solutions like `localStorage` are strictly limited to retaining plain text strings. If a developer attempts to use stored text directly in mathematical calculations, the program will perform string concatenation instead of numeric addition, turning a score of `5` plus `1` into `51` instead of `6`.
+
+Type casting and structured parsing provide a protective boundary, ensuring that external strings match the operational types required by internal engine subsystems.
 
 ---
 
@@ -42,16 +46,25 @@ function updatePersistentCoinCount() {
   localStorage.setItem('coinsCollected', String(newTotal));
 
   console.log(`[Storage Engine] Local ledger updated. Prior: ${savedCoins} | Appended: ${this.value} | New Total: ${newTotal}`);
----
-### Quick Example
+}
+```
+In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this code reads the saved coin total from localStorage, converts it from text to a number, and stores the updated value again, which makes persistent state usable in gameplay.
+
+By using parseInt() along with defensive safety nets, the script actively prevents raw string data from poisoning the arithmetic systems of the platformer. When the engine executes savedCoins + this.value, it can confidently add the values together as pure numbers rather than accidentally matching text chains.
+
+O
+
+nce the calculation concludes, the updated score flows directly back into the storage database under the coinsCollected marker, keeping progress intact even if the player closes the window or refreshes the level entirely. Implementing clean parsing boundaries across your input pipelines acts as an excellent shield against data corruption.
+
+It ensures that whenever a user returns to your web app, their achievements load smoothly and scale correctly based on their historical game states. --- ### Quick Example
 
 ```javascript
 const config = JSON.parse(rawJson);
 console.log(config.level, config.score);
 ```
 
-}
-```
-In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. In AstroPlatformer, this code reads the saved coin total from localStorage, converts it from text to a number, and stores the updated value again, which makes persistent state usable in gameplay. By using parseInt() along with defensive safety nets, the script actively prevents raw string data from poisoning the arithmetic systems of the platformer. When the engine executes savedCoins + this.value, it can confidently add the values together as pure numbers rather than accidentally matching text chains. O
 
-nce the calculation concludes, the updated score flows directly back into the storage database under the coinsCollected marker, keeping progress intact even if the player closes the window or refreshes the level entirely. Implementing clean parsing boundaries across your input pipelines acts as an excellent shield against data corruption. It ensures that whenever a user returns to your web app, their achievements load smoothly and scale correctly based on their historical game states.
+## Summary
+
+Shows how to parse and convert serialized data (like localStorage JSON) into usable numeric and object types so saved progress integrates with gameplay correctly.
+

@@ -81,14 +81,7 @@ Boolean expressions often use comparison operators.
 
 Common operators include:
 
-| Operator | Meaning |
-|---|---|
-| `===` | Equal to |
-| `!==` | Not equal to |
-| `>` | Greater than |
-| `<` | Less than |
-| `>=` | Greater than or equal |
-| `<=` | Less than or equal |
+| Operator | Meaning | |---|---| | `===` | Equal to | | `!==` | Not equal to | | `>` | Greater than | | `<` | Less than | | `>=` | Greater than or equal | | `<=` | Less than or equal |
 
 Examples:
 
@@ -132,11 +125,7 @@ Programs often combine multiple boolean expressions together.
 
 Common logical operators include:
 
-| Operator | Meaning |
-|---|---|
-| `&&` | AND |
-| `||` | OR |
-| `!` | NOT |
+| Operator | Meaning | |---|---| | `&&` | AND | | `||` | OR | | `!` | NOT |
 
 ---
 
@@ -401,14 +390,13 @@ Boolean expressions appear throughout modern software.
 
 Examples include:
 
-| System | Boolean Check |
-|---|---|
-| Login Systems | Is password correct? |
-| Games | Is player alive? |
-| Websites | Is user authenticated? |
-| APIs | Was request successful? |
-| AI Systems | Is target visible? |
-| Navigation Apps | Has destination been reached? |
+| System | Boolean Check | |---|---| | Login Systems | Is password correct? | | Games | Is player alive?
+
+| | Websites | Is user authenticated? | | APIs | Was request successful?
+
+| | AI Systems | Is target visible? | | Navigation Apps | Has destination been reached?
+
+|
 
 Boolean logic is one of the foundations of programming.
 
@@ -466,3 +454,7 @@ if (player.health <= 0) {
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/boolean-expressions-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Covers boolean expressions and logical operators used to evaluate conditions, combine checks, and build defensive game logic.

@@ -10,12 +10,7 @@ Network debugging is the process of inspecting and analyzing communication betwe
 
 Modern applications constantly exchange data through HTTP requests.
 
-Examples include:
-- Fetch requests
-- API calls
-- Image loading
-- Authentication systems
-- Game data synchronization
+Examples include: - Fetch requests - API calls - Image loading - Authentication systems - Game data synchronization
 
 The browser DevTools Network tab allows developers to inspect all of these operations in real time.
 
@@ -23,19 +18,9 @@ The browser DevTools Network tab allows developers to inspect all of these opera
 
 ### Why Network Debugging Matters
 
-Without network debugging, developers would struggle to understand:
-- Why API requests fail
-- Why data is missing
-- Why images do not load
-- Why CORS errors occur
-- Why responses are delayed
+Without network debugging, developers would struggle to understand: - Why API requests fail - Why data is missing - Why images do not load - Why CORS errors occur - Why responses are delayed
 
-Network debugging helps developers inspect:
-- Request URLs
-- Response status codes
-- Headers
-- Response data
-- Request timing
+Network debugging helps developers inspect: - Request URLs - Response status codes - Headers - Response data - Request timing
 
 ---
 
@@ -52,6 +37,11 @@ Example:
 
 ```javascript id="netdbg1"
 fetch('/api/player')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  });
+```
 ---
 ### Quick Example
 
@@ -62,9 +52,8 @@ fetch('/api/status')
   .catch(err => console.error(err));
 ```
 
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  });
-```
 <div style="display:flex;gap:10px;flex-wrap:wrap;"> <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a> <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a> <a href="{{site.baseurl}}/network-debugging-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a> </div>
+
+## Summary
+
+Shows how to inspect HTTP requests and responses using browser DevTools Network tab to diagnose API problems, CORS issues, and timing problems.

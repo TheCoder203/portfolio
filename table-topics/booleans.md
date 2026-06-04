@@ -85,13 +85,11 @@ Games constantly track many states at once.
 
 Examples include:
 
-| Boolean Variable | Meaning |
-|---|---|
-| `playerAlive` | Is the player alive? |
-| `gamePaused` | Is the game paused? |
-| `coinCollected` | Was the coin collected? |
-| `doorUnlocked` | Can the player open the door? |
-| `enemyDefeated` | Has the enemy been defeated? |
+| Boolean Variable | Meaning | |---|---| | `playerAlive` | Is the player alive? | | `gamePaused` | Is the game paused?
+
+| | `coinCollected` | Was the coin collected? | | `doorUnlocked` | Can the player open the door?
+
+| | `enemyDefeated` | Has the enemy been defeated? |
 
 These states allow the game to react dynamically to gameplay events.
 
@@ -383,14 +381,13 @@ Booleans appear in nearly every application.
 
 Examples include:
 
-| System | Boolean State |
-|---|---|
-| Video Games | Is player alive? |
-| Websites | Is user logged in? |
-| Phones | Is Wi-Fi enabled? |
-| Streaming Apps | Is video paused? |
-| Security Systems | Is access granted? |
-| Smart Devices | Is the device connected? |
+| System | Boolean State | |---|---| | Video Games | Is player alive? | | Websites | Is user logged in?
+
+| | Phones | Is Wi-Fi enabled? | | Streaming Apps | Is video paused?
+
+| | Security Systems | Is access granted? | | Smart Devices | Is the device connected?
+
+|
 
 Boolean logic is one of the foundations of computer science.
 
@@ -447,3 +444,7 @@ if (player.health <= 0) {
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/booleans-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Summarizes how boolean flags represent simple true/false states that control gameplay flow, prevent duplicate actions, and enable defensive checks.

@@ -108,8 +108,9 @@ These conditionals control how collected coins behave.
 
 The code checks:
 
-1. Whether the coin has already been collected
-2. Whether the coin's visual element exists
+1. Whether the coin has already been collected 2.
+
+Whether the coin's visual element exists
 
 Depending on the results, the game performs different actions.
 
@@ -252,14 +253,7 @@ This allows more advanced decision-making.
 
 Conditionals commonly use comparison operators.
 
-| Operator | Meaning |
-|---|---|
-| `===` | Equal to |
-| `!==` | Not equal to |
-| `>` | Greater than |
-| `<` | Less than |
-| `>=` | Greater than or equal |
-| `<=` | Less than or equal |
+| Operator | Meaning | |---|---| | `===` | Equal to | | `!==` | Not equal to | | `>` | Greater than | | `<` | Less than | | `>=` | Greater than or equal | | `<=` | Less than or equal |
 
 Example:
 
@@ -275,11 +269,7 @@ if (coins >= 10) {
 
 Conditionals can combine multiple conditions.
 
-| Operator | Meaning |
-|---|---|
-| `&&` | AND |
-| `||` | OR |
-| `!` | NOT |
+| Operator | Meaning | |---|---| | `&&` | AND | | `||` | OR | | `!` | NOT |
 
 Example:
 
@@ -390,14 +380,13 @@ Conditionals appear throughout modern software.
 
 Examples include:
 
-| System | Conditional Logic |
-|---|---|
-| Games | Is player alive? |
-| Websites | Is user logged in? |
-| Apps | Is internet connected? |
-| Banking Software | Is payment valid? |
-| Security Systems | Is access authorized? |
-| Navigation Apps | Has destination been reached? |
+| System | Conditional Logic | |---|---| | Games | Is player alive? | | Websites | Is user logged in?
+
+| | Apps | Is internet connected? | | Banking Software | Is payment valid?
+
+| | Security Systems | Is access authorized? | | Navigation Apps | Has destination been reached?
+
+|
 
 Conditionals are one of the foundations of programming logic.
 
@@ -457,3 +446,7 @@ if (player.x > flag.x - 10) {
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/conditionals-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Describes how conditional statements and boolean logic drive decision-making in games, with examples for collision, AI, and defensive checks.

@@ -6,7 +6,9 @@ permalink: /arrays
 
 # Arrays
 
-Arrays are one of the most important data structures in programming. An array is a collection of values stored in a single variable. Instead of creating separate variables for every object, developers can organize large groups of related data into arrays and process them efficiently.
+Arrays are one of the most important data structures in programming. An array is a collection of values stored in a single variable.
+
+Instead of creating separate variables for every object, developers can organize large groups of related data into arrays and process them efficiently.
 
 Arrays are extremely useful in game development because games often manage many objects at the same time, including:
 
@@ -37,12 +39,7 @@ This array contains four numbers.
 
 Each item inside an array has an index position:
 
-| Index | Value |
-|---|---|
-| 0 | 10 |
-| 1 | 20 |
-| 2 | 30 |
-| 3 | 40 |
+| Index | Value | |---|---| | 0 | 10 | | 1 | 20 | | 2 | 30 | | 3 | 40 |
 
 Arrays use zero-based indexing, meaning counting starts at 0.
 
@@ -355,17 +352,7 @@ JavaScript arrays include many built-in methods.
 
 Examples:
 
-| Method | Purpose |
-|---|---|
-| `.push()` | Add element |
-| `.pop()` | Remove last element |
-| `.shift()` | Remove first element |
-| `.unshift()` | Add to beginning |
-| `.includes()` | Check for value |
-| `.length` | Get array size |
-| `.map()` | Transform elements |
-| `.filter()` | Select elements |
-| `.find()` | Search for element |
+| Method | Purpose | |---|---| | `.push()` | Add element | | `.pop()` | Remove last element | | `.shift()` | Remove first element | | `.unshift()` | Add to beginning | | `.includes()` | Check for value | | `.length` | Get array size | | `.map()` | Transform elements | | `.filter()` | Select elements | | `.find()` | Search for element |
 
 Example:
 
@@ -462,3 +449,7 @@ for (const item of items) {
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/arrays-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Explains arrays as essential collections for managing many game objects, enabling loops, dynamic creation, and efficient state tracking.

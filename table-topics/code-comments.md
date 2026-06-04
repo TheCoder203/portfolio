@@ -131,12 +131,13 @@ Platformer physics often require operations to happen in a very specific sequenc
 
 For example:
 
-1. Apply gravity
-2. Update movement
-3. Check collisions
-4. Resolve overlaps
-5. Update animations
-6. Detect hazards
+1. Apply gravity 2.
+
+Update movement 3. Check collisions 4.
+
+Resolve overlaps 5. Update animations 6.
+
+Detect hazards
 
 Changing the order can cause bugs such as:
 
@@ -347,14 +348,7 @@ Comments are used in nearly every professional software project.
 
 Examples include:
 
-| System | Purpose of Comments |
-|---|---|
-| Games | Explain physics and AI |
-| APIs | Document endpoints |
-| Websites | Describe UI behavior |
-| Operating Systems | Explain low-level logic |
-| Databases | Document queries |
-| Security Software | Explain protections |
+| System | Purpose of Comments | |---|---| | Games | Explain physics and AI | | APIs | Document endpoints | | Websites | Describe UI behavior | | Operating Systems | Explain low-level logic | | Databases | Document queries | | Security Software | Explain protections |
 
 Comments are a major part of professional software engineering.
 
@@ -411,3 +405,7 @@ function updatePlayer(player) {
   <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
   <a href="{{site.baseurl}}/code-comments-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
+
+## Summary
+
+Advocates using clear, targeted comments to explain complex logic, design decisions, and update order so collaborators can maintain and extend code reliably.

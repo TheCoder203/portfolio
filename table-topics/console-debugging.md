@@ -304,12 +304,13 @@ Console debugging helps track how these systems interact.
 
 A typical debugging process might look like:
 
-1. Add console logs
-2. Reproduce the bug
-3. Inspect console output
-4. Identify incorrect behavior
-5. Fix the code
-6. Remove or reduce logs
+1. Add console logs 2.
+
+Reproduce the bug 3. Inspect console output 4.
+
+Identify incorrect behavior 5. Fix the code 6.
+
+Remove or reduce logs
 
 This iterative process is common in development.
 
@@ -337,14 +338,7 @@ console.warn('[Leaderboard] Failed to load scores', error);
 
 Console debugging is used in:
 
-| System | Purpose |
-|---|---|
-| Games | Track gameplay bugs |
-| Websites | Debug UI issues |
-| APIs | Monitor requests |
-| Mobile Apps | Track crashes |
-| Backend Servers | Monitor errors |
-| AI Systems | Inspect model behavior |
+| System | Purpose | |---|---| | Games | Track gameplay bugs | | Websites | Debug UI issues | | APIs | Monitor requests | | Mobile Apps | Track crashes | | Backend Servers | Monitor errors | | AI Systems | Inspect model behavior |
 
 It is one of the most universal debugging tools.
 
@@ -379,11 +373,14 @@ The logging system ensures that:
 - Debugging improves stability and development speed
 - Logs help track game state and errors
 
-Console debugging is one of the most important tools in programming and is essential for building reliable games and applications.
----
-### Quick Example
+Console debugging is one of the most important tools in programming and is essential for building reliable games and applications. --- ### Quick Example
 
 ```javascript
 console.log('Player position:', player.x, player.y);
 ```
+
+
+## Summary
+
+Describes using the browser console for logging, warnings, and errors to trace program flow, inspect state, and debug asynchronous behavior.
 

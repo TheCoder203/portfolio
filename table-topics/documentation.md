@@ -6,7 +6,9 @@ permalink: /documentation
 
 ### Documentation
 
-In software development, **documentation** is the practice of embedding clear, descriptive information within or alongside source code to explain its purpose, architecture, and logic. AstroPlatformer includes high-level comments that explain how gravity, collision, and scoring work. That kind of documentation is useful not just for this game, but for anyone reading code later to understand the design.
+In software development, **documentation** is the practice of embedding clear, descriptive information within or alongside source code to explain its purpose, architecture, and logic. AstroPlatformer includes high-level comments that explain how gravity, collision, and scoring work.
+
+That kind of documentation is useful not just for this game, but for anyone reading code later to understand the design.
 
 Effective documentation transforms complex, abstract algorithms into maintainable assets. By outlining systemic rules—such as game loop intervals, vector modifications, and state changes—before the implementation begins, developers can onboard teammates faster, debug logical bottlenecks efficiently, and ensure that future modifications do not break core mechanics.
 
@@ -16,6 +18,11 @@ Effective documentation transforms complex, abstract algorithms into maintainabl
 ### Why it matters
 
 Clear debugging and documentation habits make the game easier to maintain and fix when issues arise.
+
+### Comprehensive Architecture Comments
+
+In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The header blocks serve as a operational map for the script's inner functions:
+
 ---
 ### Quick Example
 
@@ -25,11 +32,6 @@ function updatePlayer(player) {
   player.x += player.vx;
 }
 ```
-
-
-### Comprehensive Architecture Comments
-
-In AstroPlatformer, this snippet shows how the topic appears in the actual game code and helps demonstrate the idea with a working example. The header blocks serve as a operational map for the script's inner functions:
 
 ```javascript
 // =========================================================================
@@ -75,3 +77,8 @@ function processGameTick(player, environment) {
   checkHazards(player, environment.spikes);
   updateScoreboard(player);
 }
+```
+
+## Summary
+
+Encourages maintaining clear documentation and inline guides so others can understand system design, usage, and maintenance steps.

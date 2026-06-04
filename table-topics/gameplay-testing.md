@@ -6,7 +6,9 @@ permalink: /gameplay-testing
 
 ### Gameplay Testing
 
-In interactive application design, **gameplay testing** and logical validation are the processes used to verify that mechanics perform reliably under all user behaviors. AstroPlatformer is tested in the code by checking coin collection, player death, and goal logic. That kind of test thinking is what keeps the level from having obvious bugs when it runs in the browser.
+In interactive application design, **gameplay testing** and logical validation are the processes used to verify that mechanics perform reliably under all user behaviors. AstroPlatformer is tested in the code by checking coin collection, player death, and goal logic.
+
+That kind of test thinking is what keeps the level from having obvious bugs when it runs in the browser.
 
 Rather than relying entirely on manual playtesting, modern web engines programmatically validate states within the runtime loop. By defining specific mathematical boundaries for success and failure, developers can automate boundary test cases—ensuring that physical elements like velocity, hitboxes, and scale adjustments cooperate seamlessly to produce an accurate game state.
 
@@ -47,15 +49,28 @@ function checkLevelCompletion(pcx, pcy, fx, fy) {
   return false; // Player is not within the completion trigger zone
 }
 ```
----
-### Quick Example
+In AstroPlatformer, this snippet checks whether the player has reached the goal flag and then triggers the level win sequence, which is a core part of gameplay correctness. 
+
+By examining this equation, we see how the test conditions use this._scaleX and this._scaleY to scale the target hitbox alongside changing window resolutions. Testing this logic confirms that regardless of frame rate stutter or monitor size, the collision coordinates line up properly, preventing players from clipping straight through the finish line without completing the level.
+
+
+
+This proportional scaling calculation safeguards the fundamental rules of the world against different display types. When a user changes orientation or resizes their desktop screen, the bounding boxes morph seamlessly alongside the visual assets.
+
+Consequently, the player never encounters invisible walls or disjointed win conditions. Implementing these adaptive coordinate checks acts as an internal quality control mechanism that executes silently on every frame.
+
+--- ### Quick Example
 
 ```javascript
 console.log('Quick example for Gameplay Testing');
 ```
 
-In AstroPlatformer, this snippet checks whether the player has reached the goal flag and then triggers the level win sequence, which is a core part of gameplay correctness. 
 
-By examining this equation, we see how the test conditions use this._scaleX and this._scaleY to scale the target hitbox alongside changing window resolutions. Testing this logic confirms that regardless of frame rate stutter or monitor size, the collision coordinates line up properly, preventing players from clipping straight through the finish line without completing the level. 
+## Summary
 
-This proportional scaling calculation safeguards the fundamental rules of the world against different display types. When a user changes orientation or resizes their desktop screen, the bounding boxes morph seamlessly alongside the visual assets. Consequently, the player never encounters invisible walls or disjointed win conditions. Implementing these adaptive coordinate checks acts as an internal quality control mechanism that executes silently on every frame.
+Explains methods for validating gameplay mechanics (bounding boxes and AABB checks) so levels behave consistently across resolutions and inputs.
+
+
+## Summary
+
+Explains methods for validating gameplay mechanics (bounding boxes and AABB checks) so levels behave consistently across resolutions and inputs.

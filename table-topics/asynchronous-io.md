@@ -56,7 +56,9 @@ async function saveProgress(data) {
   <a href="{{site.baseurl}}/asynchronous-io-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
 </div>
 
+## Summary
 
+Explains promises and async/await patterns that keep the game responsive while performing background I/O tasks like API calls and asset loading.
 Without asynchronous programming, applications would freeze whenever they needed to wait for data.
 
 In AstroPlatformer, asynchronous behavior is used when initializing systems such as the score manager. The game continues running smoothly while background operations complete independently.
@@ -422,14 +424,7 @@ Asynchronous I/O appears throughout modern software.
 
 Examples include:
 
-| System | Async Operation |
-|---|---|
-| Games | Loading levels |
-| Websites | Fetching API data |
-| Streaming Apps | Buffering videos |
-| Chat Apps | Receiving messages |
-| Cloud Services | Uploading files |
-| Multiplayer Games | Syncing players |
+| System | Async Operation | |---|---| | Games | Loading levels | | Websites | Fetching API data | | Streaming Apps | Buffering videos | | Chat Apps | Receiving messages | | Cloud Services | Uploading files | | Multiplayer Games | Syncing players |
 
 Nearly every modern interactive application relies on asynchronous systems.
 

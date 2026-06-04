@@ -6,9 +6,13 @@ permalink: /constructor-chaining
 
 ### Constructor Chaining
 
-In object-oriented programming, **constructor chaining** is a powerful architectural pattern where a constructor invokes another constructor within the same class hierarchy. When dealing with class inheritance, a derived (child) class must call the constructor of its base (parent) class before initializing its own fields. 
+In object-oriented programming, **constructor chaining** is a powerful architectural pattern where a constructor invokes another constructor within the same class hierarchy. When dealing with class inheritance, a derived (child) class must call the constructor of its base (parent) class before initializing its own fields.
 
-This initialization link is forged using the `super()` keyword. Executing `super()` ensures that all core infrastructure, standard environments, and state variables belonging to the parent entity are built first. Think of it like filling out a mandatory baseline registration form before you are allowed to add your own custom, specialized fields on top. In JavaScript, invoking `super()` is not optional; failing to call it in a sub-class constructor before accessing `this` throws a runtime reference error, as the engine requires the foundational blueprint to exist before appending additions.
+
+
+This initialization link is forged using the `super()` keyword. Executing `super()` ensures that all core infrastructure, standard environments, and state variables belonging to the parent entity are built first.
+
+Think of it like filling out a mandatory baseline registration form before you are allowed to add your own custom, specialized fields on top. In JavaScript, invoking `super()` is not optional; failing to call it in a sub-class constructor before accessing `this` throws a runtime reference error, as the engine requires the foundational blueprint to exist before appending additions.
 
 ---
 
@@ -16,6 +20,11 @@ This initialization link is forged using the `super()` keyword. Executing `super
 ### Why it matters
 
 Structured object code makes the game engine easier to expand and reduces repeated logic as the codebase grows.
+
+### Implementing the Base Initialization
+
+The level object starts by setting up its constructor state, which is the first step in building a platformer instance. That constructor sets defaults and prepares the game for all the later logic that depends on those values.
+
 ---
 ### Quick Example
 
@@ -34,11 +43,6 @@ class Player extends GameObject {
   }
 }
 ```
-
-
-### Implementing the Base Initialization
-
-The level object starts by setting up its constructor state, which is the first step in building a platformer instance. That constructor sets defaults and prepares the game for all the later logic that depends on those values.
 
 ```javascript
 class AstroPlatformer {
@@ -107,3 +111,8 @@ class NebulaSector extends AstroPlatformer {
 const mockEnvironment = { path: "/assets/game/sprites/", innerWidth: 1920, innerHeight: 1080 };
 const activeStage = new NebulaSector(mockEnvironment, "Cosmic Horizon");
 activeStage.initEngineLoop();
+```
+
+## Summary
+
+Describes constructor chaining and super() usage to initialize base class state before extending behavior in subclasses, preventing runtime errors and ensuring proper setup.
