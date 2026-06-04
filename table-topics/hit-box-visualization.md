@@ -68,6 +68,37 @@ This design pattern significantly simplifies your code by allowing the collision
 
 Consequently, tracking down math bugs or alignment issues becomes a simple task of watching the lines update live in your web browser.
 
+---
+
+### Toggling Hitbox Display Using Browser Inspect
+
+You can toggle hitbox visibility directly in the browser DevTools without restarting the game.
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Open the Console:** Click the `Console` tab at the top of DevTools.
+
+3. **Enable Debug Mode:** Run this command to activate hitbox visualization:
+   ```javascript
+   gameEnv.debugModeActive = true;
+   ```
+
+4. **Disable Debug Mode:** To hide hitboxes, run:
+   ```javascript
+   gameEnv.debugModeActive = false;
+   ```
+
+5. **Alternative: Toggle CSS Directly:** If hitboxes are already rendered, you can also find them in the Elements panel:
+   - Click the Element Inspector (top-left arrow icon in DevTools)
+   - Click on a visible hitbox outline in the game
+   - In the Styles panel, toggle the `display` property or the `border` style to show/hide
+
+**Example:** If you see a `.hitbox` element with `display: none`, change it to `display: block` to show it immediately.
+
+This approach is invaluable for testing collision detection, verifying that coins are placed correctly, and confirming that platforms align with their visual representations.
+
 --- ### Quick Example
 
 ```javascript

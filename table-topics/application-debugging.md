@@ -41,6 +41,94 @@ const score = localStorage.getItem('highScore');
 
 console.log(score);
 ```
+
+---
+
+### How to Inspect Application Storage
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Navigate to Application Tab:** Click the `Application` tab at the top of DevTools (may be labeled `Storage` on some browsers).
+
+3. **View localStorage:**
+   - In the left sidebar, expand `Storage` and click `Local Storage`
+   - Select the game's domain from the list
+   - All saved key-value pairs are displayed in a table
+
+4. **View sessionStorage:**
+   - Click `Session Storage` in the left sidebar
+   - Select the game's domain
+   - Shows data stored temporarily for the current browser session
+
+5. **View Cookies:**
+   - Click `Cookies` in the left sidebar
+   - Select the game's domain
+   - See all cookies including authentication tokens and preferences
+
+6. **Inspect Stored Data:**
+   - Click on any key to see its full value
+   - Check the expiration date for cookies
+   - Verify that authentication tokens are present and not expired
+
+7. **Modify Storage (Testing):** Double-click a value to edit it temporarily (useful for testing):
+   ```
+   Key: highScore
+   Value: 5000
+   ```
+
+8. **Clear Storage:** Right-click an entry and select `Delete` or clear all data for the domain.
+
+9. **Add New Data:** Click the empty row at the bottom to manually add test data:
+   - Key: `testLevel`
+   - Value: `3`
+
+10. **Check for Corruption:** If the game fails to load save data:
+    - Open Application > Local Storage
+    - Look for the expected keys (e.g., `coinsCollected`, `levelProgress`)
+    - If missing, the game hasn't saved properly
+    - If present but corrupted (not valid JSON), you've found the problem
+
+**Example Workflow:**
+- Play and collect coins in the game
+- Open Application > Local Storage
+- Verify that `coinsCollected` has been updated
+- Close the browser and reopen the game
+- Check if `coinsCollected` persisted correctly
+- If it didn't, there's a storage bug to fix
+
+---
+
+### Toggling Hitbox Display Using Browser Inspect
+
+You can toggle hitbox visibility directly in the browser DevTools without restarting the game.
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Open the Console:** Click the `Console` tab at the top of DevTools.
+
+3. **Enable Debug Mode:** Run this command to activate hitbox visualization:
+   ```javascript
+   gameEnv.debugModeActive = true;
+   ```
+
+4. **Disable Debug Mode:** To hide hitboxes, run:
+   ```javascript
+   gameEnv.debugModeActive = false;
+   ```
+
+5. **Alternative: Toggle CSS Directly:** If hitboxes are already rendered, you can also find them in the Elements panel:
+   - Click the Element Inspector (top-left arrow icon in DevTools)
+   - Click on a visible hitbox outline in the game
+   - In the Styles panel, toggle the `display` property or the `border` style to show/hide
+
+**Example:** If you see a `.hitbox` element with `display: none`, change it to `display: block` to show it immediately.
+
+This approach is invaluable for testing collision detection, verifying that coins are placed correctly, and confirming that platforms align with their visual representations.
+
 ---
 ### Quick Example
 

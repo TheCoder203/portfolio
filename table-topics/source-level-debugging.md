@@ -54,6 +54,79 @@ function updatePlayer(player) {
   applyGravity(player);
 }
 ```
+
+---
+
+### How to Use Source-Level Debugging
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Navigate to Sources Tab:** Click the `Sources` tab at the top of DevTools.
+
+3. **Find Your File:** In the left panel, expand the file structure and locate the JavaScript file you want to debug.
+
+4. **Set a Breakpoint:** Click on a line number in the code editor. A blue dot appears, indicating the breakpoint.
+
+5. **Trigger the Code:** Interact with the game to cause the breakpointed code to execute. The debugger pauses execution at that line.
+
+6. **Inspect Variables:** When paused, hover over variables or check the right panel to see their current values.
+
+7. **Step Through Code:**
+   - **Step Over (F10):** Execute the current line and move to the next
+   - **Step Into (F11):** Enter a function to inspect its internal logic
+   - **Step Out (Shift+F11):** Exit the current function and return to the caller
+
+8. **Resume Execution:** Press the play button or press `F8` to continue running the game.
+
+9. **Watch Expressions:** Right-click on a variable and select `Watch` to monitor it throughout execution.
+
+10. **Use the Debugger Statement:** Place `debugger;` in your code to automatically pause when that line executes:
+    ```javascript
+    function updatePlayer(player) {
+      debugger;  // Execution pauses here when the debugger is open
+      player.x += player.speed;
+    }
+    ```
+
+**Example Workflow:**
+- Set a breakpoint in the collision detection function
+- Run the game until a collision occurs
+- Inspect the player position and platform coordinates
+- Step through the logic to understand why the collision did or didn't trigger
+
+---
+
+### Toggling Hitbox Display Using Browser Inspect
+
+You can toggle hitbox visibility directly in the browser DevTools without restarting the game.
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Open the Console:** Click the `Console` tab at the top of DevTools.
+
+3. **Enable Debug Mode:** Run this command to activate hitbox visualization:
+   ```javascript
+   gameEnv.debugModeActive = true;
+   ```
+
+4. **Disable Debug Mode:** To hide hitboxes, run:
+   ```javascript
+   gameEnv.debugModeActive = false;
+   ```
+
+5. **Alternative: Toggle CSS Directly:** If hitboxes are already rendered, you can also find them in the Elements panel:
+   - Click the Element Inspector (top-left arrow icon in DevTools)
+   - Click on a visible hitbox outline in the game
+   - In the Styles panel, toggle the `display` property or the `border` style to show/hide
+
+**Example:** If you see a `.hitbox` element with `display: none`, change it to `display: block` to show it immediately.
+
+This approach is invaluable for testing collision detection, verifying that coins are placed correctly, and confirming that platforms align with their visual representations.
+
 ---
 ### Quick Example
 

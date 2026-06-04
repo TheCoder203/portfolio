@@ -318,7 +318,78 @@ The logging system ensures that:
 
 - The console is used for debugging in browsers - `console.log`, `console.warn`, and `console.error` show different message types - Debugging helps developers understand program behavior - Console logs are essential for asynchronous systems - AstroPlatformer logs score manager failures safely - Debugging improves stability and development speed - Logs help track game state and errors
 
-Console debugging is one of the most important tools in programming and is essential for building reliable games and applications. --- ### Quick Example
+Console debugging is one of the most important tools in programming and is essential for building reliable games and applications.
+
+---
+
+### How to Use Console Debugging
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Open the Console Tab:** Click the `Console` tab at the top of DevTools.
+
+3. **Run Console Commands:** In the console input area at the bottom, type and execute JavaScript commands:
+   ```javascript
+   console.log('Check this value:', myVariable);
+   ```
+
+4. **View Output:** The console displays all logs, warnings, and errors in real-time as the game runs.
+
+5. **Add Logs to Your Code:** Insert console statements directly into your game code:
+   ```javascript
+   function updatePlayer(player) {
+     console.log('Player position:', player.x, player.y);
+     player.x += player.speed;
+   }
+   ```
+
+6. **Filter Output:** Use the filter box to search for specific log messages or errors.
+
+7. **Use Different Log Levels:**
+   - `console.log()` — Standard information
+   - `console.warn()` — Non-critical warnings
+   - `console.error()` — Critical errors
+
+**Example Workflow:**
+- Add a log before and after a critical operation
+- Reproduce the bug in the game
+- Check the console output to see where the problem occurs
+- Remove or reduce logs once the issue is fixed
+
+---
+
+### Toggling Hitbox Display Using Browser Inspect
+
+You can toggle hitbox visibility directly in the browser DevTools without restarting the game.
+
+**Steps:**
+
+1. **Open DevTools:** Press `F12` or right-click the game and select `Inspect`.
+
+2. **Open the Console:** Click the `Console` tab at the top of DevTools.
+
+3. **Enable Debug Mode:** Run this command to activate hitbox visualization:
+   ```javascript
+   gameEnv.debugModeActive = true;
+   ```
+
+4. **Disable Debug Mode:** To hide hitboxes, run:
+   ```javascript
+   gameEnv.debugModeActive = false;
+   ```
+
+5. **Alternative: Toggle CSS Directly:** If hitboxes are already rendered, you can also find them in the Elements panel:
+   - Click the Element Inspector (top-left arrow icon in DevTools)
+   - Click on a visible hitbox outline in the game
+   - In the Styles panel, toggle the `display` property or the `border` style to show/hide
+
+**Example:** If you see a `.hitbox` element with `display: none`, change it to `display: block` to show it immediately.
+
+This approach is invaluable for testing collision detection, verifying that coins are placed correctly, and confirming that platforms align with their visual representations.
+
+--- ### Quick Example
 
 ```javascript
 console.log('Player position:', player.x, player.y);
