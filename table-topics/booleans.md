@@ -6,7 +6,10 @@ permalink: /booleans
 
 # Booleans
 
-Booleans are one of the most fundamental data types in programming. A boolean represents a value that can only be one of two possibilities:
+### Overview
+Booleans are one of the most fundamental data types in programming.
+
+A boolean represents a value that can only be one of two possibilities:
 
 ```javascript
 true
@@ -15,6 +18,7 @@ true
 or
 
 ```javascript
+
 false
 ```
 
@@ -22,13 +26,7 @@ Although booleans are simple, they are incredibly powerful because they allow pr
 
 In game development, booleans are used constantly to manage gameplay systems and object states. Games rely on booleans to determine things such as:
 
-- Whether a player is alive
-- Whether a coin was collected
-- Whether a door is unlocked
-- Whether the game is paused
-- Whether an enemy is active
-- Whether a level is completed
-- Whether the player is touching the ground
+- Whether a player is alive - Whether a coin was collected - Whether a door is unlocked - Whether the game is paused - Whether an enemy is active - Whether a level is completed - Whether the player is touching the ground
 
 In AstroPlatformer, booleans help keep the game logic stable, predictable, and efficient.
 
@@ -51,8 +49,8 @@ false
 Example:
 
 ```javascript
-const gameOver = false;
-const playerAlive = true;
+
+const gameOver = false; const playerAlive = true;
 ```
 
 These values represent conditions or states inside a program.
@@ -119,6 +117,7 @@ This prevents the game from processing the same coin multiple times.
 ### Breaking Down the First Condition
 
 ```javascript
+
 if (this.collected) return;
 ```
 
@@ -126,9 +125,7 @@ This checks whether the coin has already been collected.
 
 If `this.collected` is true:
 
-- The function exits immediately
-- No additional processing occurs
-- The coin cannot be collected again
+- The function exits immediately - No additional processing occurs - The coin cannot be collected again
 
 This improves stability and prevents duplicate rewards.
 
@@ -153,6 +150,7 @@ this.collected === false
 then:
 
 ```javascript
+
 !this.collected === true
 ```
 
@@ -170,9 +168,7 @@ Once the coin is collected, the boolean value changes permanently.
 
 This state update ensures:
 
-- The coin disappears
-- The score updates only once
-- Duplicate collection is impossible
+- The coin disappears - The score updates only once - Duplicate collection is impossible
 
 State tracking is one of the main uses of booleans in games.
 
@@ -194,9 +190,8 @@ These values help the game engine determine what actions are allowed.
 For example:
 
 ```javascript
-if (grounded) {
-  jump();
-}
+
+if (grounded) { jump(); }
 ```
 
 The player can only jump when grounded is true.
@@ -234,6 +229,7 @@ const lowHealth = playerHealth < 20;
 If the player's health is below 20:
 
 ```javascript
+
 lowHealth === true
 ```
 
@@ -265,10 +261,7 @@ If it was true, it becomes false.
 
 This is commonly used for:
 
-- Pause menus
-- Toggle switches
-- Visibility systems
-- Game settings
+- Pause menus - Toggle switches - Visibility systems - Game settings
 
 ---
 
@@ -279,11 +272,10 @@ Collision systems rely heavily on booleans.
 Example:
 
 ```javascript
+
 const touchingGround = player.y >= platform.y;
 
-if (touchingGround) {
-  player.canJump = true;
-}
+if (touchingGround) { player.canJump = true; }
 ```
 
 The boolean determines whether the player is standing on a platform.
@@ -332,6 +324,7 @@ One major use of booleans is preventing repeated actions.
 Example:
 
 ```javascript
+
 if (buttonPressed) return;
 
 buttonPressed = true;
@@ -339,10 +332,7 @@ buttonPressed = true;
 
 This pattern prevents:
 
-- Duplicate API requests
-- Multiple button presses
-- Repeated rewards
-- Double processing
+- Duplicate API requests - Multiple button presses - Repeated rewards - Double processing
 
 AstroPlatformer uses this exact idea for coin collection.
 
@@ -354,12 +344,7 @@ JavaScript also supports truthy and falsy values.
 
 Falsy values include:
 
-- `false`
-- `0`
-- `null`
-- `undefined`
-- `''`
-- `NaN`
+- `false` - `0` - `null` - `undefined` - `''` - `NaN`
 
 Everything else is generally truthy.
 
@@ -397,21 +382,11 @@ Boolean logic is one of the foundations of computer science.
 
 AstroPlatformer uses booleans throughout the game engine to manage:
 
-- Coin collection
-- Player movement
-- Collision detection
-- Level completion
-- Game states
-- Menu systems
-- Enemy behaviors
+- Coin collection - Player movement - Collision detection - Level completion - Game states - Menu systems - Enemy behaviors
 
 The boolean-based architecture helps:
 
-- Prevent duplicate actions
-- Simplify game logic
-- Improve predictability
-- Reduce bugs
-- Keep gameplay stable
+- Prevent duplicate actions - Simplify game logic - Improve predictability - Reduce bugs - Keep gameplay stable
 
 Without booleans, the game would struggle to track object states efficiently.
 
@@ -419,14 +394,7 @@ Without booleans, the game would struggle to track object states efficiently.
 
 ### Key Takeaways
 
-- Booleans store either `true` or `false`
-- Booleans represent states and conditions
-- Games rely heavily on boolean logic
-- `if` statements use booleans for decisions
-- `!` means NOT
-- Booleans help prevent duplicate actions
-- Boolean flags track game states
-- AstroPlatformer uses booleans for stable coin collection logic
+- Booleans store either `true` or `false` - Booleans represent states and conditions - Games rely heavily on boolean logic - `if` statements use booleans for decisions - `!` means NOT - Booleans help prevent duplicate actions - Boolean flags track game states - AstroPlatformer uses booleans for stable coin collection logic
 
 Booleans are one of the most essential building blocks of programming and interactive game systems.
 

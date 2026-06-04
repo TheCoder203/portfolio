@@ -6,6 +6,7 @@ permalink: /application-debugging
 
 # Application Debugging
 
+### Overview
 Application debugging focuses on inspecting stored browser data and application state.
 
 Modern web applications store information such as: - Cookies - localStorage - sessionStorage - Authentication tokens - User settings - Cached data

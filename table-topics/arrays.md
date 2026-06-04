@@ -6,22 +6,20 @@ permalink: /arrays
 
 # Arrays
 
-Arrays are one of the most important data structures in programming. An array is a collection of values stored in a single variable.
+### Overview
+Arrays are one of the most important data structures in programming.
+
+An array is a collection of values stored in a single variable.
 
 Instead of creating separate variables for every object, developers can organize large groups of related data into arrays and process them efficiently.
 
 Arrays are extremely useful in game development because games often manage many objects at the same time, including:
 
-- Platforms
-- Coins
-- Enemies
-- Particles
-- Projectiles
-- Obstacles
-- Player inventories
-- Animation frames
+- Platforms - Coins - Enemies - Particles - Projectiles - Obstacles - Player inventories - Animation frames
 
-In AstroPlatformer, arrays are used heavily throughout the game engine to manage level layouts, objects, overlays, and game state. Arrays allow the game to dynamically render large numbers of objects without duplicating code.
+In AstroPlatformer, arrays are used heavily throughout the game engine to manage level layouts, objects, overlays, and game state.
+
+Arrays allow the game to dynamically render large numbers of objects without duplicating code.
 
 ---
 
@@ -50,10 +48,10 @@ Arrays use zero-based indexing, meaning counting starts at 0.
 Individual elements can be accessed using bracket notation.
 
 ```javascript
+
 const enemies = ['slime', 'robot', 'drone'];
 
-console.log(enemies[0]);
-console.log(enemies[1]);
+console.log(enemies[0]); console.log(enemies[1]);
 ```
 
 Output:
@@ -87,11 +85,8 @@ Arrays solve this problem by organizing data into structured collections.
 Example:
 
 ```javascript
-const platforms = [
-  { x: 100, y: 200 },
-  { x: 300, y: 250 },
-  { x: 500, y: 180 }
-];
+
+const platforms = [ { x: 100, y: 200 }, { x: 300, y: 250 }, { x: 500, y: 180 } ];
 ```
 
 Now the game can process all platforms using loops.
@@ -136,10 +131,8 @@ for (const coin of coins) {
 Output:
 
 ```javascript
-5
-10
-15
-20
+
+5 10 15 20
 ```
 
 The loop processes each element automatically.
@@ -176,12 +169,7 @@ Without arrays, developers would need to write repetitive code for every enemy.
 
 Arrays can store many different types of values:
 
-- Numbers
-- Strings
-- Booleans
-- Objects
-- Functions
-- Other arrays
+- Numbers - Strings - Booleans - Objects - Functions - Other arrays
 
 Example:
 
@@ -196,10 +184,8 @@ const player = [
 Arrays can also store objects:
 
 ```javascript
-const platforms = [
-  { x: 100, y: 300, width: 200 },
-  { x: 400, y: 250, width: 150 }
-];
+
+const platforms = [ { x: 100, y: 300, width: 200 }, { x: 400, y: 250, width: 150 } ];
 ```
 
 Object arrays are extremely common in game engines.
@@ -229,10 +215,7 @@ Output:
 
 In games, `.push()` is often used for:
 
-- Collecting items
-- Spawning enemies
-- Adding particles
-- Tracking projectiles
+- Collecting items - Spawning enemies - Adding particles - Tracking projectiles
 
 ---
 
@@ -243,6 +226,7 @@ Arrays can also remove elements.
 Example using `.pop()`:
 
 ```javascript
+
 const items = ['Sword', 'Shield'];
 
 items.pop();
@@ -269,6 +253,7 @@ console.log(enemies);
 Output:
 
 ```javascript
+
 ['slime', 'drone']
 ```
 
@@ -282,12 +267,7 @@ Arrays are often used to store game state information.
 
 Examples include:
 
-- Active enemies
-- Collected coins
-- Current projectiles
-- Inventory items
-- Animation frames
-- Collision objects
+- Active enemies - Collected coins - Current projectiles - Inventory items - Animation frames - Collision objects
 
 Example:
 
@@ -328,19 +308,13 @@ Arrays can contain other arrays.
 Example:
 
 ```javascript
-const levelMap = [
-  [1, 1, 1, 1],
-  [0, 0, 1, 0],
-  [1, 0, 0, 1]
-];
+
+const levelMap = [ [1, 1, 1, 1], [0, 0, 1, 0], [1, 0, 0, 1] ];
 ```
 
 This type of structure is commonly used for:
 
-- Tile maps
-- Grid systems
-- Collision maps
-- Board games
+- Tile maps - Grid systems - Collision maps - Board games
 
 Nested arrays are extremely important in level design.
 
@@ -377,9 +351,8 @@ Arrays help improve performance because developers can process many objects usin
 Instead of writing repetitive code:
 
 ```javascript
-drawPlatform(platform1);
-drawPlatform(platform2);
-drawPlatform(platform3);
+
+drawPlatform(platform1); drawPlatform(platform2); drawPlatform(platform3);
 ```
 
 The game can use loops:
@@ -398,24 +371,13 @@ This creates cleaner and more scalable code.
 
 AstroPlatformer relies heavily on arrays for managing:
 
-- Platforms
-- Overlays
-- Coins
-- Hazards
-- Enemy data
-- Level layouts
-- Collision objects
-- Rendering systems
+- Platforms - Overlays - Coins - Hazards - Enemy data - Level layouts - Collision objects - Rendering systems
 
 The platform array allows the game to generate entire levels dynamically from stored data structures.
 
 This approach:
 
-- Reduces duplicated code
-- Improves scalability
-- Simplifies rendering
-- Makes level editing easier
-- Improves maintainability
+- Reduces duplicated code - Improves scalability - Simplifies rendering - Makes level editing easier - Improves maintainability
 
 Arrays are one of the core systems that make the game's architecture efficient and flexible.
 
@@ -423,15 +385,7 @@ Arrays are one of the core systems that make the game's architecture efficient a
 
 ### Key Takeaways
 
-- Arrays store collections of data
-- Arrays use zero-based indexing
-- Loops allow efficient processing of arrays
-- Games use arrays for objects and game state
-- Arrays simplify rendering systems
-- `.push()` adds elements
-- `.pop()` removes elements
-- Arrays improve scalability and organization
-- AstroPlatformer uses arrays to manage platforms and overlays
+- Arrays store collections of data - Arrays use zero-based indexing - Loops allow efficient processing of arrays - Games use arrays for objects and game state - Arrays simplify rendering systems - `.push()` adds elements - `.pop()` removes elements - Arrays improve scalability and organization - AstroPlatformer uses arrays to manage platforms and overlays
 
 Arrays are one of the most fundamental and powerful tools in programming and game development.
 

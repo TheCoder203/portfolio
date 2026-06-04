@@ -6,20 +6,16 @@ permalink: /conditionals
 
 # Conditionals
 
-Conditionals are one of the most important concepts in programming because they allow programs to make decisions. A conditional statement checks whether a condition is true or false and then chooses what code should execute.
+### Overview
+Conditionals are one of the most important concepts in programming because they allow programs to make decisions.
+
+A conditional statement checks whether a condition is true or false and then chooses what code should execute.
 
 Without conditionals, programs would always follow the exact same sequence of instructions and would not be able to react dynamically to user input, gameplay events, or changing data.
 
 In game development, conditionals are used constantly to control behavior such as:
 
-- Player movement
-- Collision detection
-- Enemy AI
-- Health systems
-- Item collection
-- Game over states
-- Animation triggers
-- Level progression
+- Player movement - Collision detection - Enemy AI - Health systems - Item collection - Game over states - Animation triggers - Level progression
 
 In AstroPlatformer, conditionals help the game decide how objects should behave based on the current game state.
 
@@ -50,6 +46,7 @@ If the condition is false, the code is skipped.
 Conditionals rely on boolean values:
 
 ```javascript
+
 true
 ```
 
@@ -79,12 +76,7 @@ Games constantly react to changing situations.
 
 Conditionals allow the game to answer questions such as:
 
-- Is the player alive?
-- Did the player collect the coin?
-- Is the enemy nearby?
-- Is the game paused?
-- Has the level been completed?
-- Is the object visible?
+- Is the player alive? - Did the player collect the coin? - Is the enemy nearby? - Is the game paused? - Has the level been completed? - Is the object visible?
 
 Without conditionals, games would not be interactive.
 
@@ -95,13 +87,10 @@ Without conditionals, games would not be interactive.
 The following code comes directly from AstroPlatformer:
 
 ```javascript
+
 if (this.collected) return;
 
-if (this.canvas) {
-    this.canvas.style.opacity = '0';
-    this.canvas.style.transition = 'opacity 0.3s';
-    setTimeout(() => this.canvas?.remove(), 350);
-}
+if (this.canvas) { this.canvas.style.opacity = '0'; this.canvas.style.transition = 'opacity 0.3s'; setTimeout(() => this.canvas?.remove(), 350); }
 ```
 
 These conditionals control how collected coins behave.
@@ -134,10 +123,7 @@ then the function exits immediately.
 
 This prevents:
 
-- Duplicate collection
-- Multiple score increases
-- Repeated animations
-- Extra processing
+- Duplicate collection - Multiple score increases - Repeated animations - Extra processing
 
 Conditionals help maintain stable game logic.
 
@@ -146,6 +132,7 @@ Conditionals help maintain stable game logic.
 ### Breaking Down the Second Conditional
 
 ```javascript
+
 if (this.canvas)
 ```
 
@@ -178,6 +165,7 @@ creates a smooth animation effect.
 Finally:
 
 ```javascript
+
 setTimeout(() => this.canvas?.remove(), 350);
 ```
 
@@ -216,11 +204,8 @@ Programs often need multiple possible outcomes.
 Example:
 
 ```javascript
-if (playerAlive) {
-  updatePlayer();
-} else {
-  showGameOverScreen();
-}
+
+if (playerAlive) { updatePlayer(); } else { showGameOverScreen(); }
 ```
 
 If the player is alive, gameplay continues.
@@ -274,9 +259,8 @@ Conditionals can combine multiple conditions.
 Example:
 
 ```javascript
-if (playerAlive && hasKey) {
-  openDoor();
-}
+
+if (playerAlive && hasKey) { openDoor(); }
 ```
 
 Both conditions must be true.
@@ -323,11 +307,8 @@ Conditionals can exist inside other conditionals.
 Example:
 
 ```javascript
-if (playerAlive) {
-  if (hasWeapon) {
-    attack();
-  }
-}
+
+if (playerAlive) { if (hasWeapon) { attack(); } }
 ```
 
 This creates more advanced game logic.
@@ -363,9 +344,8 @@ Conditionals are extremely important for defensive programming.
 Example:
 
 ```javascript
-if (player && player.inventory) {
-  console.log(player.inventory);
-}
+
+if (player && player.inventory) { console.log(player.inventory); }
 ```
 
 This prevents errors caused by missing objects.
@@ -396,22 +376,11 @@ Conditionals are one of the foundations of programming logic.
 
 AstroPlatformer uses conditionals throughout the game engine to control:
 
-- Coin collection
-- Collision handling
-- Rendering updates
-- Physics systems
-- Enemy behaviors
-- UI animations
-- Object removal
-- Level progression
+- Coin collection - Collision handling - Rendering updates - Physics systems - Enemy behaviors - UI animations - Object removal - Level progression
 
 The conditionals help the game:
 
-- Respond dynamically to player actions
-- Prevent errors
-- Control gameplay flow
-- Improve stability
-- Create interactive experiences
+- Respond dynamically to player actions - Prevent errors - Control gameplay flow - Improve stability - Create interactive experiences
 
 Without conditionals, the game could not react intelligently to changing situations.
 
@@ -419,14 +388,7 @@ Without conditionals, the game could not react intelligently to changing situati
 
 ### Key Takeaways
 
-- Conditionals allow programs to make decisions
-- `if` statements execute code when conditions are true
-- Games rely heavily on conditional logic
-- `if...else` handles multiple outcomes
-- Logical operators combine conditions
-- Conditionals help prevent errors
-- Collision systems and AI use conditionals constantly
-- AstroPlatformer uses conditionals to manage coin behavior and animations
+- Conditionals allow programs to make decisions - `if` statements execute code when conditions are true - Games rely heavily on conditional logic - `if...else` handles multiple outcomes - Logical operators combine conditions - Conditionals help prevent errors - Collision systems and AI use conditionals constantly - AstroPlatformer uses conditionals to manage coin behavior and animations
 
 Conditionals are one of the most essential building blocks of programming, interactivity, and game development.
 
@@ -441,11 +403,7 @@ if (player.x > flag.x - 10) {
 }
 ```
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-  <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
-  <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
-  <a href="{{site.baseurl}}/conditionals-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
-</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;"> <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a> <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a> <a href="{{site.baseurl}}/conditionals-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a> </div>
 
 ## Summary
 

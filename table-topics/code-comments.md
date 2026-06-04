@@ -6,11 +6,18 @@ permalink: /code-comments
 
 # Code Comments
 
-Code comments are notes written inside source code to help explain what the program is doing and why certain decisions were made. Comments are ignored by the computer during execution, but they are extremely important for developers because they improve readability, organization, and maintainability.
+### Overview
+Code comments are notes written inside source code to help explain what the program is doing and why certain decisions were made.
 
-In software engineering, developers often work on large codebases containing thousands or even millions of lines of code. Without comments, understanding complicated systems becomes much more difficult.
+Comments are ignored by the computer during execution, but they are extremely important for developers because they improve readability, organization, and maintainability.
 
-In AstroPlatformer, comments help explain platformer physics, collision handling, update order, and gameplay systems. These comments make the game easier to understand for both current and future developers.
+In software engineering, developers often work on large codebases containing thousands or even millions of lines of code.
+
+Without comments, understanding complicated systems becomes much more difficult.
+
+In AstroPlatformer, comments help explain platformer physics, collision handling, update order, and gameplay systems.
+
+These comments make the game easier to understand for both current and future developers.
 
 ---
 
@@ -27,10 +34,8 @@ In JavaScript, single-line comments use:
 Multi-line comments use:
 
 ```javascript
-/*
-This is a
-multi-line comment
-*/
+
+/* This is a multi-line comment */
 ```
 
 The JavaScript engine ignores comments completely during execution.
@@ -41,13 +46,7 @@ The JavaScript engine ignores comments completely during execution.
 
 Comments help developers:
 
-- Understand complicated systems
-- Explain difficult algorithms
-- Document important logic
-- Describe why code exists
-- Improve teamwork
-- Debug problems more easily
-- Maintain large projects
+- Understand complicated systems - Explain difficult algorithms - Document important logic - Describe why code exists - Improve teamwork - Debug problems more easily - Maintain large projects
 
 Good comments make software much easier to work with.
 
@@ -92,10 +91,12 @@ Now the purpose of the code is much clearer.
 The following comments come directly from AstroPlatformer:
 
 ```javascript
-//  5. PLATFORM COLLISION — for every platform (including moving one):
-//       TOP: player's bottom swept from above-to-below the platform top
-//       ...
-//  7. SPIKE DEATH — checked using the player's resolved (post-collision) feet position
+
+//  5.
+
+PLATFORM COLLISION — for every platform (including moving one): //       TOP: player's bottom swept from above-to-below the platform top //       ... //  7.
+
+SPIKE DEATH — checked using the player's resolved (post-collision) feet position
 ```
 
 These comments explain the order and reasoning behind the collision system.
@@ -108,18 +109,11 @@ Instead of forcing developers to reverse-engineer the logic, the comments clearl
 
 Collision systems are often complicated because they involve:
 
-- Physics calculations
-- Position updates
-- Timing rules
-- Edge cases
-- Multiple object interactions
+- Physics calculations - Position updates - Timing rules - Edge cases - Multiple object interactions
 
 Comments help explain:
 
-- Why collisions are checked in a specific order
-- How movement is resolved
-- Why certain calculations exist
-- How bugs are prevented
+- Why collisions are checked in a specific order - How movement is resolved - Why certain calculations exist - How bugs are prevented
 
 In platformer games, update order is extremely important.
 
@@ -141,10 +135,7 @@ Detect hazards
 
 Changing the order can cause bugs such as:
 
-- Falling through platforms
-- Double jumps
-- Incorrect collisions
-- Teleportation glitches
+- Falling through platforms - Double jumps - Incorrect collisions - Teleportation glitches
 
 Comments help developers understand why the order matters.
 
@@ -166,10 +157,7 @@ This is called self-documenting code.
 
 However, comments are still important for explaining:
 
-- Complex logic
-- Design decisions
-- Unusual behavior
-- Performance optimizations
+- Complex logic - Design decisions - Unusual behavior - Performance optimizations
 
 ---
 
@@ -203,8 +191,8 @@ Explain what code is doing.
 Example:
 
 ```javascript
-// Spawn enemy at random position
-spawnEnemy();
+
+// Spawn enemy at random position spawnEnemy();
 ```
 
 ---
@@ -240,10 +228,8 @@ Describe functions or classes.
 Example:
 
 ```javascript
-/**
- * Updates the player's movement and collision state
- */
-function updatePlayer() {
+
+/** * Updates the player's movement and collision state */ function updatePlayer() {
 
 }
 ```
@@ -256,10 +242,7 @@ Comments are especially important in team projects.
 
 Without comments:
 
-- New developers may struggle to understand systems
-- Bugs become harder to fix
-- Features become harder to expand
-- Collaboration slows down
+- New developers may struggle to understand systems - Bugs become harder to fix - Features become harder to expand - Collaboration slows down
 
 Good comments improve communication between developers.
 
@@ -269,12 +252,7 @@ Good comments improve communication between developers.
 
 Game engines often contain complicated systems such as:
 
-- Physics
-- Collision detection
-- AI behavior
-- Animation systems
-- Rendering pipelines
-- Networking systems
+- Physics - Collision detection - AI behavior - Animation systems - Rendering pipelines - Networking systems
 
 Comments help explain these systems clearly.
 
@@ -317,6 +295,7 @@ Comments also help with debugging.
 Example:
 
 ```javascript
+
 // Collision bug occurs if velocity exceeds platform width
 ```
 
@@ -332,9 +311,7 @@ Software projects may last for many years.
 
 Future developers may not remember:
 
-- Why a system was designed a certain way
-- What edge cases were solved
-- Why a workaround exists
+- Why a system was designed a certain way - What edge cases were solved - Why a workaround exists
 
 Comments preserve this information.
 
@@ -358,20 +335,11 @@ Comments are a major part of professional software engineering.
 
 AstroPlatformer uses comments to explain systems such as:
 
-- Platform collisions
-- Spike detection
-- Physics ordering
-- Rendering logic
-- Update loops
-- Gameplay rules
+- Platform collisions - Spike detection - Physics ordering - Rendering logic - Update loops - Gameplay rules
 
 These comments help developers:
 
-- Understand the game engine faster
-- Debug issues more easily
-- Modify systems safely
-- Expand gameplay features
-- Maintain code quality
+- Understand the game engine faster - Debug issues more easily - Modify systems safely - Expand gameplay features - Maintain code quality
 
 The comments turn complicated game logic into understandable documentation.
 
@@ -379,14 +347,7 @@ The comments turn complicated game logic into understandable documentation.
 
 ### Key Takeaways
 
-- Code comments explain source code for humans
-- Comments improve readability and maintainability
-- JavaScript uses `//` and `/* */` for comments
-- Comments help explain complex systems
-- Good comments describe why code exists
-- Comments improve teamwork and debugging
-- Platformer physics often require detailed explanations
-- AstroPlatformer uses comments to document collision flow and update order
+- Code comments explain source code for humans - Comments improve readability and maintainability - JavaScript uses `//` and `/* */` for comments - Comments help explain complex systems - Good comments describe why code exists - Comments improve teamwork and debugging - Platformer physics often require detailed explanations - AstroPlatformer uses comments to document collision flow and update order
 
 Code comments are an essential part of professional software engineering and game development.
 
@@ -400,11 +361,7 @@ function updatePlayer(player) {
 }
 ```
 
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-  <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a>
-  <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a>
-  <a href="{{site.baseurl}}/code-comments-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a>
-</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;"> <a href="{{site.baseurl}}/table" style="text-decoration:none;"><div style="background-color:#f59e0b;color:#111;padding:10px 18px;border-radius:8px;font-weight:bold;">Back to Table</div></a> <a href="{{site.baseurl}}/astro-platgame-lesson/" style="text-decoration:none;"><div style="background-color:#3b82f6;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open AstroPlatformer Demo</div></a> <a href="{{site.baseurl}}/code-comments-lesson" style="text-decoration:none;"><div style="background-color:#10b981;color:white;padding:10px 18px;border-radius:8px;font-weight:bold;">Open Lesson Notebook</div></a> </div>
 
 ## Summary
 

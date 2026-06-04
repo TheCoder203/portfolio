@@ -6,16 +6,12 @@ permalink: /source-level-debugging
 
 # Source-Level Debugging
 
+### Overview
 Source-level debugging is the process of examining and controlling code execution line-by-line while a program is running.
 
 Instead of only looking at console output, source-level debugging allows developers to:
 
-- Pause execution
-- Inspect variables
-- Step through functions
-- Watch program flow
-- Analyze logic in real time
-- Identify bugs more precisely
+- Pause execution - Inspect variables - Step through functions - Watch program flow - Analyze logic in real time - Identify bugs more precisely
 
 In JavaScript development, source-level debugging is commonly done using the browser DevTools Sources tab.
 

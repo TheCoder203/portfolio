@@ -6,20 +6,18 @@ permalink: /boolean-expressions
 
 # Boolean Expressions
 
-Boolean expressions are logical statements that evaluate to either `true` or `false`. They are one of the most fundamental concepts in computer science because they allow programs to make decisions and control behavior dynamically.
+### Overview
+Boolean expressions are logical statements that evaluate to either `true` or `false`.
+
+They are one of the most fundamental concepts in computer science because they allow programs to make decisions and control behavior dynamically.
 
 In programming, boolean expressions are used everywhere, including:
 
-- Conditional statements
-- Game logic
-- Collision detection
-- User authentication
-- AI behavior
-- Input validation
-- Loops
-- Error checking
+- Conditional statements - Game logic - Collision detection - User authentication - AI behavior - Input validation - Loops - Error checking
 
-In AstroPlatformer, boolean expressions help determine whether systems are available and whether certain actions should occur. The game uses logical checks to safely control gameplay systems and avoid runtime errors.
+In AstroPlatformer, boolean expressions help determine whether systems are available and whether certain actions should occur.
+
+The game uses logical checks to safely control gameplay systems and avoid runtime errors.
 
 ---
 
@@ -35,8 +33,8 @@ false
 Examples:
 
 ```javascript
-const gameRunning = true;
-const playerDead = false;
+
+const gameRunning = true; const playerDead = false;
 ```
 
 Booleans are commonly used to represent states or conditions inside a program.
@@ -62,6 +60,7 @@ true
 Another example:
 
 ```javascript
+
 10 === 20
 ```
 
@@ -90,6 +89,7 @@ score > 100
 ```
 
 ```javascript
+
 lives === 0
 ```
 
@@ -136,9 +136,8 @@ The `&&` operator requires both conditions to be true.
 Example:
 
 ```javascript
-if (playerAlive && levelComplete) {
-  console.log('Advance to next level');
-}
+
+if (playerAlive && levelComplete) { console.log('Advance to next level'); }
 ```
 
 Both conditions must be true for the code to execute.
@@ -184,9 +183,8 @@ Because `paused` is false, `!paused` becomes true.
 The following code comes directly from AstroPlatformer:
 
 ```javascript
-if (sm && typeof sm.updateScoreDisplay === 'function') {
-    sm.updateScoreDisplay(gameEnv.stats.coinsCollected);
-}
+
+if (sm && typeof sm.updateScoreDisplay === 'function') { sm.updateScoreDisplay(gameEnv.stats.coinsCollected); }
 ```
 
 This snippet uses a boolean expression to safely verify that the score manager exists before updating the display.
@@ -216,6 +214,7 @@ These are combined using the `&&` operator.
 ### Condition 1: Checking if `sm` Exists
 
 ```javascript
+
 sm
 ```
 
@@ -223,9 +222,7 @@ This checks whether the score manager object exists.
 
 If `sm` is:
 
-- `null`
-- `undefined`
-- `false`
+- `null` - `undefined` - `false`
 
 then the condition fails.
 
@@ -257,12 +254,7 @@ Games constantly evaluate conditions using boolean logic.
 
 Examples include:
 
-- Is the player alive?
-- Has the level been completed?
-- Is the enemy nearby?
-- Did the player collect the item?
-- Is the game paused?
-- Has the timer expired?
+- Is the player alive? - Has the level been completed? - Is the enemy nearby? - Did the player collect the item? - Is the game paused? - Has the timer expired?
 
 Without boolean expressions, games could not react dynamically to player actions.
 
@@ -275,10 +267,8 @@ Boolean expressions are heavily used in collision systems.
 Example:
 
 ```javascript
-if (player.x < enemy.x + enemy.width &&
-    player.x + player.width > enemy.x) {
-  console.log('Collision detected');
-}
+
+if (player.x < enemy.x + enemy.width && player.x + player.width > enemy.x) { console.log('Collision detected'); }
 ```
 
 This determines whether two objects overlap.
@@ -311,12 +301,7 @@ JavaScript also supports truthy and falsy values.
 
 Falsy values include:
 
-- `false`
-- `0`
-- `null`
-- `undefined`
-- `''`
-- `NaN`
+- `false` - `0` - `null` - `undefined` - `''` - `NaN`
 
 Everything else is generally considered truthy.
 
@@ -339,9 +324,8 @@ Programs can combine many boolean expressions together.
 Example:
 
 ```javascript
-if (playerAlive && hasWeapon && ammo > 0) {
-  shoot();
-}
+
+if (playerAlive && hasWeapon && ammo > 0) { shoot(); }
 ```
 
 This creates more advanced game logic.
@@ -406,21 +390,11 @@ Boolean logic is one of the foundations of programming.
 
 AstroPlatformer uses boolean expressions to safely manage systems such as:
 
-- Score managers
-- Leaderboards
-- Player states
-- Collision systems
-- Game events
-- Rendering logic
-- Level progression
+- Score managers - Leaderboards - Player states - Collision systems - Game events - Rendering logic - Level progression
 
 The boolean checks help the game:
 
-- Prevent crashes
-- Verify objects exist
-- Control gameplay flow
-- Handle missing systems safely
-- Improve overall stability
+- Prevent crashes - Verify objects exist - Control gameplay flow - Handle missing systems safely - Improve overall stability
 
 Without boolean logic, the game would not be able to make intelligent decisions dynamically.
 
@@ -428,15 +402,7 @@ Without boolean logic, the game would not be able to make intelligent decisions 
 
 ### Key Takeaways
 
-- Boolean expressions evaluate to `true` or `false`
-- Boolean logic controls program decisions
-- Comparison operators create conditions
-- Logical operators combine conditions
-- `&&` means AND
-- `||` means OR
-- `!` means NOT
-- Boolean expressions are essential for games
-- AstroPlatformer uses boolean checks for safe system handling
+- Boolean expressions evaluate to `true` or `false` - Boolean logic controls program decisions - Comparison operators create conditions - Logical operators combine conditions - `&&` means AND - `||` means OR - `!` means NOT - Boolean expressions are essential for games - AstroPlatformer uses boolean checks for safe system handling
 
 Boolean expressions are one of the most important building blocks of programming and game development.
 
@@ -444,9 +410,8 @@ Boolean expressions are one of the most important building blocks of programming
 ### Quick Example
 
 ```javascript
-if (player.health <= 0) {
-  endGame();
-}
+
+if (player.health <= 0) { endGame(); }
 ```
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;">

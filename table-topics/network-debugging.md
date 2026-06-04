@@ -6,6 +6,7 @@ permalink: /network-debugging
 
 # Network Debugging
 
+### Overview
 Network debugging is the process of inspecting and analyzing communication between an application and external resources such as APIs, servers, databases, and web services.
 
 Modern applications constantly exchange data through HTTP requests.

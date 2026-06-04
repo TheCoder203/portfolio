@@ -6,6 +6,7 @@ permalink: /element-inspection
 
 # Element Inspection
 
+### Overview
 Element inspection is the process of examining and modifying HTML and CSS directly inside the browser using DevTools.
 
 Developers use the Elements tab to: - Inspect page structure - Analyze CSS styles - Modify layout - Debug rendering issues - Examine live DOM updates
@@ -42,12 +43,9 @@ Example HTML:
 ### Quick Example
 
 ```javascript
-async function saveProgress(data) {
-  const response = await fetch('/api/save', {
-    method: 'POST',
-    body: JSON.stringify(data)
-  });
-  return response.json();
+function inspectElement(element) {
+  console.log('Inspecting element:', element);
+  debugger;
 }
 ```
 
