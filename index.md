@@ -8,15 +8,16 @@ hide: true
 
 Hi! My name is Krish Kelageri.
 
-| Role         | Name     | Repo Location                       | Stream                | Repo Name |
-|--------------|----------|-------------------------------------|-----------------------|-----------|
-| Scrum Master | John     | github.com/jm1021/student           | upstream (OCS fork)   | student   |
-| Scrummer     | Krish    | github.com/TheCoder203/student      | downstream (fork)     | student   |
-| Scrummer     | Jasan    | github.com/Jas-Bop/student          | downstream (fork)     | student   |
-| Scrummer     | Aarnav   | github.com/Aarnav-Jain/student      | downstream (fork)     | student   |
 
 
-## Links to Learning
+## Journey through life
+Born in 2010 in La Jolla.
+I went to monterey ridge elementary school
+I went to oak  valley middle school
+I am currently enrolled in Del Norte High School
+
+
+
 
 ### Development Environment
 
