@@ -60,9 +60,8 @@ Flags are made using Wikipedia images
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
-        {"flag": "0/01/Flag_of_Unites_States.svg", "greeting": "Hey", "description": "US - forever"},
-        {"flag": "b/b9/Flag_of_Mexico.svg", "greeting": "Hi", "description": "MExico - a few times"},
-        {"flag": "b/be/Flag_of_India.svg", "greeting": "Alright mate", "description": "India - a lot of times"},
+        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+        
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -100,31 +99,11 @@ Flags are made using Wikipedia images
 
 Here is what I did at those places
 
-Born in 2010 in La Jolla.
-I went to monterey ridge elementary school
-I went to oak  valley middle school
-I am currently enrolled in Del Norte High School
-### Culture, Family, and Fun
+- Was born in San Diego
+- 🏫 Went to Monterey Ridge for TK - 4th grade
+- 🏫 Went to Del Sur for 5th grade
+- 🏫 Went to Oak Valley for 6th - 8th grade.
+- 🏫 Going to Del Norte for 9th grade.
 
-Everything for me, as for many others, revolves around family and faith.
 
-- My mother and father bare btoh indian, so I'm fully indian
- - 
 
-<comment>
-Gallery of Pics, scroll to the right for more ...
-</comment>
-<div class="image-gallery">
-  <img src="{{site.baseurl}}/images/about/missionary.jpg" alt="Image 1">
-  <img src="{{site.baseurl}}/images/about/john_tamara.jpg" alt="Image 2">
-  <img src="{{site.baseurl}}/images/about/tamara_fam.jpg" alt="Image 3">
-  <img src="{{site.baseurl}}/images/about/surf.jpg" alt="Image 4">
-  <img src="{{site.baseurl}}/images/about/john_lora.jpg" alt="Image 5">
-  <img src="{{site.baseurl}}/images/about/lora_fam.jpg" alt="Image 6">
-  <img src="{{site.baseurl}}/images/about/lora_fam2.jpg" alt="Image 7">
-  <img src="{{site.baseurl}}/images/about/pj_party.jpg" alt="Image 8">
-  <img src="{{site.baseurl}}/images/about/trent_family.png" alt="Image 9">
-  <img src="{{site.baseurl}}/images/about/claire.jpg" alt="Image 10">
-  <img src="{{site.baseurl}}/images/about/grandkids.jpg" alt="Image 11">
-  <img src="{{site.baseurl}}/images/about/farm.jpg" alt="Image 12">
-</div>
