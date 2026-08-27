@@ -58,14 +58,13 @@ Flags are made using Wikipedia images
     var container = document.getElementById("grid_container"); // This container connects to the HTML div
 
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
-    var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
+    var http_source = "https://commons.wikimedia.org/wiki/Special:FilePath/";
     var living_in_the_world = [
-        {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "0/01/Flag_of_India.svg", "greeting": "Hey", "description": "CIndia"},
-        {"flag": "0/01/Flag_of_France.svg", "greeting": "Hey", "description": "France"},
-        {"flag": "0/01/Flag_of_Mexico.svg", "greeting": "Hey", "description": "Mexico"},
-        {"flag": "0/01/Flag_of_England.svg", "greeting": "Hey", "description": "England"},
-        
+        {"flag": "Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+        {"flag": "Flag_of_India.svg", "greeting": "Hey", "description": "India"},
+        {"flag": "Flag_of_France.svg", "greeting": "Hey", "description": "France"},
+        {"flag": "Flag_of_Mexico.svg", "greeting": "Hey", "description": "Mexico"},
+        {"flag": "Flag_of_England.svg", "greeting": "Hey", "description": "England"},
     ];
 
     // 3a. Consider how to update style count for size of container
@@ -78,8 +77,8 @@ Flags are made using Wikipedia images
         gridItem.className = "grid-item";  // This class name connects the gridItem to the CSS style elements
         // Add "img" HTML tag for the flag
         var img = document.createElement("img");
-        img.src = http_source + location.flag; // concatenate the source and flag
-        img.alt = location.flag + " Flag"; // add alt text for accessibility
+        img.src = http_source + encodeURIComponent(location.flag); // build a reliable Wikimedia file URL
+        img.alt = location.description + " Flag"; // add alt text for accessibility
 
         // Add "p" HTML tag for the description
         var description = document.createElement("p");
