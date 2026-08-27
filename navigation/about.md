@@ -7,7 +7,7 @@ comments: true
 
 ## As a conversation Starter
 
-Here are some places I have lived.
+Here are some places I have visited.
 
 <comment>
 Flags are made using Wikipedia images
@@ -61,6 +61,10 @@ Flags are made using Wikipedia images
     var http_source = "https://upload.wikimedia.org/wikipedia/commons/";
     var living_in_the_world = [
         {"flag": "0/01/Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+        {"flag": "0/01/Flag_of_India.svg", "greeting": "Hey", "description": "CIndia"},
+        {"flag": "0/01/Flag_of_France.svg", "greeting": "Hey", "description": "France"},
+        {"flag": "0/01/Flag_of_Mexico.svg", "greeting": "Hey", "description": "Mexico"},
+        {"flag": "0/01/Flag_of_England.svg", "greeting": "Hey", "description": "England"},
         
     ];
 
@@ -99,10 +103,10 @@ Flags are made using Wikipedia images
 
 Here is what I did at those places
 
-- Was born in San Diego
-- 🏫 Went to Monterey Ridge for TK - 4th grade
+- I was born in San Diego
+- 🏫 Went to Monterey Ridge for transitional kindergarten - 4th grade
 - 🏫 Went to Del Sur for 5th grade
-- 🏫 Went to Oak Valley for 6th - 8th grade.
+- 🏫 Went to Oak Valley for 6th through 8th grade.
 - 🏫 Going to Del Norte for 9th grade.
 
 
