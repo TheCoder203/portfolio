@@ -11,10 +11,10 @@ Hi! My name is Krish Kelageri.
 
 
 ## Journey through life
-Born in 2010 in La Jolla.
-I went to monterey ridge elementary school
-I went to oak  valley middle school
-I am currently enrolled in Del Norte High School
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/about" class="btn">
+        About ME
+    </a>
 
 
 
