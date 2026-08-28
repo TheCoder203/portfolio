@@ -63,9 +63,9 @@ Flags are made using Wikipedia images
     var http_source = "https://commons.wikimedia.org/wiki/Special:FilePath/";
     var living_in_the_world = [
         {"flag": "Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
-        {"flag": "Flag_of_India.svg", "greeting": "Hey", "description": "India"},
-        {"flag": "Flag_of_France.svg", "greeting": "Hey", "description": "France"},
-        {"flag": "Flag_of_Mexico.svg", "greeting": "Hey", "description": "Mexico"},
+        {"flag": "Flag_of_India.svg", "greeting": "Namaste", "description": "India"},
+        {"flag": "Flag_of_France.svg", "greeting": "Bonjour", "description": "France"},
+        {"flag": "Flag_of_Mexico.svg", "greeting": "Hola", "description": "Mexico"},
         {"flag": "Flag_of_England.svg", "greeting": "Hey", "description": "England"},
     ];
 
