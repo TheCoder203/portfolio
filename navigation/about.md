@@ -110,5 +110,15 @@ Here is what I did at those places
 - 🏫 Went to Oak Valley for 6th through 8th grade.
 - 🏫 Going to Del Norte for 9th grade.
 
+<comment>
+Gallery of Pics of where I've been
+</comment>
+<div class="image-gallery">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chichen-Itza-Castillo-Seen-From-North.JPG" alt="Chichén Itzá">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal_2012.jpg" alt="Taj Mahal">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace,_London,_England_-_April_2010.jpg" alt="Buckingham Palace">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/GoldenGateBridge.jpg" alt="Golden Gate Bridge">
+</div>
+
 
 
