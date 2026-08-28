@@ -7,6 +7,8 @@ comments: true
 
 ## As a conversation Starter
 
+![My Photo](/images/myphoto.jpg)
+
 Here are some places I have visited.
 
 <comment>
