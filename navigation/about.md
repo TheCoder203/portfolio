@@ -66,7 +66,7 @@ Flags are made using Wikipedia images
         {"flag": "Flag_of_India.svg", "greeting": "Namaste", "description": "India"},
         {"flag": "Flag_of_France.svg", "greeting": "Salut", "description": "France"},
         {"flag": "Flag_of_Mexico.svg", "greeting": "Hola", "description": "Mexico"},
-        {"flag": "Flag_of_England.svg", "greeting": "Hello", "description": "England"},
+        {"flag": "Flag_of_England.svg", "greeting": "Hi", "description": "England"},
     ];
 
     // 3a. Consider how to update style count for size of container
