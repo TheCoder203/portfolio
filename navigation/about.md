@@ -62,11 +62,11 @@ Flags are made using Wikipedia images
     // 2. Define a JavaScript object for our http source and our data rows for the Living in the World grid
     var http_source = "https://commons.wikimedia.org/wiki/Special:FilePath/";
     var living_in_the_world = [
-        {"flag": "Flag_of_California.svg", "greeting": "Hey", "description": "California - forever"},
+        {"flag": "Flag_of_California.svg", "greeting": "Howdy", "description": "California - forever"},
         {"flag": "Flag_of_India.svg", "greeting": "Namaste", "description": "India"},
-        {"flag": "Flag_of_France.svg", "greeting": "Bonjour", "description": "France"},
+        {"flag": "Flag_of_France.svg", "greeting": "Salut", "description": "France"},
         {"flag": "Flag_of_Mexico.svg", "greeting": "Hola", "description": "Mexico"},
-        {"flag": "Flag_of_England.svg", "greeting": "Hey", "description": "England"},
+        {"flag": "Flag_of_England.svg", "greeting": "Hello", "description": "England"},
     ];
 
     // 3a. Consider how to update style count for size of container
