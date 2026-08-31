@@ -118,7 +118,7 @@ Here is what I did at those places
   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal_2012.jpg" alt="Taj Mahal">
   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Palace,_London_-_April_2009.jpg" alt="Buckingham Palace">
   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/GoldenGateBridge.jpg" alt="Golden Gate Bridge">
-  <img src="{{ '/images/IMG_0179.jpeg' | relative_url }}" alt="img_0179">
+  <img src="{{ site.baseurl }}/images/IMG_0179.jpeg" alt="IMG_0179">
 </div>
 
 
