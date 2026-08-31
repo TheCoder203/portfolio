@@ -111,6 +111,12 @@ Here is what I did at those places
 - 🏫 Going to Del Norte for 9th grade.
 
 
+### Family
+
+ - I have a mom, a dad, and a brother
+ - Brother is currently in 5th grade
+ - My dad is a software engineer. He worked at Qualcomm for around 15 years then changed to ARM a couple years ago
+
 ### Gallery of Pics of where I've been
 
 <div class="image-gallery">
