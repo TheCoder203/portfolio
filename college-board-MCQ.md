@@ -6,7 +6,7 @@ hide: true
 ---
 
 ## Score
-On the MCQ, I got a 66/66. However, I did search some of the answers where I was truly confused. This was about 10-15 of the questions.
+On the MCQ, I got a 64/66. However, I did search some of the answers where I was truly confused. This was about 10-15 of the questions.
 
 ![score](/images/MCQ.png)
 
